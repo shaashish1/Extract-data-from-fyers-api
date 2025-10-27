@@ -1,0 +1,19 @@
+{
+  "category": "indices",
+  "count": 12,
+  "last_updated": "2025-10-26T13:58:15.553548",
+  "symbols": [
+    "NSE:NIFTY50-INDEX",
+    "NSE:NIFTYBANK-INDEX",
+    "NSE:NIFTY-INDEX",
+    "NSE:FINNIFTY-INDEX",
+    "NSE:NIFTYMIDCAP50-INDEX",
+    "NSE:NIFTYSMALLCAP50-INDEX",
+    "NSE:NIFTYIT-INDEX",
+    "NSE:NIFTYPHARMA-INDEX",
+    "NSE:NIFTYAUTO-INDEX",
+    "NSE:NIFTYMETAL-INDEX",
+    "NSE:NIFTYREALTY-INDEX",
+    "NSE:INDIAVIX-INDEX"
+  ]
+}

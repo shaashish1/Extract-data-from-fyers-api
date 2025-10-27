@@ -1,0 +1,14 @@
+{
+  "last_updated": "2025-10-25T21:44:04.391487",
+  "total_symbols": 223,
+  "discovery_method": "fyers_api_dynamic_enhanced",
+  "categories": {
+    "indices": 4,
+    "nifty50_stocks": 0,
+    "nifty100_stocks": 0,
+    "nifty200_stocks": 108,
+    "banknifty_stocks": 11,
+    "nifty50_options": 50,
+    "banknifty_options": 50
+  }
+}

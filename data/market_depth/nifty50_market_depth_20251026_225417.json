@@ -1,0 +1,3780 @@
+{
+  "timestamp": "2025-10-26T22:52:57.302853",
+  "total_symbols": 50,
+  "successful_symbols": 49,
+  "market_data": {
+    "NSE:RELIANCE-EQ": {
+      "totalbuyqty": 9299,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1451.6,
+          "volume": 9299,
+          "ord": 16
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1450,
+      "h": 1459.8,
+      "l": 1441,
+      "c": 1448.4,
+      "chp": 0.22,
+      "tick_Size": 0.1,
+      "ch": 3.2,
+      "ltq": 1,
+      "ltt": 1761301750,
+      "ltp": 1451.6,
+      "v": 9700837,
+      "atp": 1450.24,
+      "lower_ckt": 1306.5,
+      "upper_ckt": 1596.7,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:TCS-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 931,
+      "ask": [
+        {
+          "price": 3063.2,
+          "volume": 931,
+          "ord": 11
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 3080,
+      "h": 3090,
+      "l": 3058.3,
+      "c": 3073.2,
+      "chp": -0.33,
+      "tick_Size": 0.1,
+      "ch": -10,
+      "ltq": 20,
+      "ltt": 1761301769,
+      "ltp": 3063.2,
+      "v": 2684318,
+      "atp": 3073.61,
+      "lower_ckt": 2756.9,
+      "upper_ckt": 3369.5,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:HDFCBANK-EQ": {
+      "totalbuyqty": 261,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 994.75,
+          "volume": 261,
+          "ord": 18
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1011,
+      "h": 1011.95,
+      "l": 991.3,
+      "c": 1008.8,
+      "chp": -1.39,
+      "tick_Size": 0.05,
+      "ch": -14.05,
+      "ltq": 1,
+      "ltt": 1761301420,
+      "ltp": 994.75,
+      "v": 17707768,
+      "atp": 999.39,
+      "lower_ckt": 895.3,
+      "upper_ckt": 1094.2,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ICICIBANK-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 445,
+      "ask": [
+        {
+          "price": 1377.7,
+          "volume": 445,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1368.1,
+      "h": 1381.6,
+      "l": 1368.1,
+      "c": 1363.7,
+      "chp": 1.03,
+      "tick_Size": 0.1,
+      "ch": 14,
+      "ltq": 9,
+      "ltt": 1761301493,
+      "ltp": 1377.7,
+      "v": 10570263,
+      "atp": 1376.14,
+      "lower_ckt": 1240,
+      "upper_ckt": 1515.4,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:HINDUNILVR-EQ": {
+      "totalbuyqty": 172,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 2516.4,
+          "volume": 172,
+          "ord": 17
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2584,
+      "h": 2584,
+      "l": 2474.5,
+      "c": 2601.6,
+      "chp": -3.27,
+      "tick_Size": 0.1,
+      "ch": -85.2,
+      "ltq": 4,
+      "ltt": 1761301754,
+      "ltp": 2516.4,
+      "v": 3110800,
+      "atp": 2512.27,
+      "lower_ckt": 2264.8,
+      "upper_ckt": 2768,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:INFY-EQ": {
+      "totalbuyqty": 2386,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1525.4,
+          "volume": 2386,
+          "ord": 32
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1539.5,
+      "h": 1543,
+      "l": 1518,
+      "c": 1528.5,
+      "chp": -0.2,
+      "tick_Size": 0.1,
+      "ch": -3.1,
+      "ltq": 73,
+      "ltt": 1761301788,
+      "ltp": 1525.4,
+      "v": 8652257,
+      "atp": 1525.74,
+      "lower_ckt": 1352.2,
+      "upper_ckt": 1652.6,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ITC-EQ": {
+      "totalbuyqty": 9317,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 416.8,
+          "volume": 9317,
+          "ord": 27
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 415.95,
+      "h": 417.95,
+      "l": 413.45,
+      "c": 415.95,
+      "chp": 0.2,
+      "tick_Size": 0.05,
+      "ch": 0.85,
+      "ltq": 2,
+      "ltt": 1761301777,
+      "ltp": 416.8,
+      "v": 14935678,
+      "atp": 415.51,
+      "lower_ckt": 375.15,
+      "upper_ckt": 458.45,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:SBIN-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 6047,
+      "ask": [
+        {
+          "price": 904.5,
+          "volume": 6047,
+          "ord": 17
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 910.95,
+      "h": 914.1,
+      "l": 900.95,
+      "c": 911.55,
+      "chp": -0.77,
+      "tick_Size": 0.05,
+      "ch": -7.05,
+      "ltq": 4,
+      "ltt": 1761301726,
+      "ltp": 904.5,
+      "v": 5313227,
+      "atp": 905.66,
+      "lower_ckt": 814.05,
+      "upper_ckt": 994.95,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BHARTIARTL-EQ": {
+      "totalbuyqty": 407,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 2029.3,
+          "volume": 407,
+          "ord": 5
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2008,
+      "h": 2033,
+      "l": 2006.9,
+      "c": 2007.9,
+      "chp": 1.07,
+      "tick_Size": 0.1,
+      "ch": 21.4,
+      "ltq": 24,
+      "ltt": 1761301480,
+      "ltp": 2029.3,
+      "v": 3236799,
+      "atp": 2024.56,
+      "lower_ckt": 1826.4,
+      "upper_ckt": 2232.2,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:KOTAKBANK-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 152,
+      "ask": [
+        {
+          "price": 2187,
+          "volume": 152,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2238,
+      "h": 2238,
+      "l": 2168.2,
+      "c": 2225.6,
+      "chp": -1.73,
+      "tick_Size": 0.1,
+      "ch": -38.6,
+      "ltq": 100,
+      "ltt": 1761301666,
+      "ltp": 2187,
+      "v": 3258737,
+      "atp": 2182.37,
+      "lower_ckt": 1968.3,
+      "upper_ckt": 2405.7,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:LT-EQ": {
+      "totalbuyqty": 184,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 3904.9,
+          "volume": 184,
+          "ord": 10
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 3929.3,
+      "h": 3939.9,
+      "l": 3897.5,
+      "c": 3918.7,
+      "chp": -0.35,
+      "tick_Size": 0.1,
+      "ch": -13.8,
+      "ltq": 1,
+      "ltt": 1761301703,
+      "ltp": 3904.9,
+      "v": 1146636,
+      "atp": 3917.18,
+      "lower_ckt": 3514.5,
+      "upper_ckt": 4295.3,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:AXISBANK-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 81,
+      "ask": [
+        {
+          "price": 1241.9,
+          "volume": 81,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1254.2,
+      "h": 1256,
+      "l": 1240.1,
+      "c": 1258.8,
+      "chp": -1.34,
+      "tick_Size": 0.1,
+      "ch": -16.9,
+      "ltq": 5,
+      "ltt": 1761301747,
+      "ltp": 1241.9,
+      "v": 4882046,
+      "atp": 1244.33,
+      "lower_ckt": 1117.8,
+      "upper_ckt": 1366,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ASIANPAINT-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2495,
+      "h": 2506.7,
+      "l": 2486.3,
+      "c": 2502.4,
+      "chp": -0.03,
+      "tick_Size": 0.1,
+      "ch": -0.8,
+      "ltq": 3,
+      "ltt": 1761301603,
+      "ltp": 2501.6,
+      "v": 327596,
+      "atp": 2497.95,
+      "lower_ckt": 2251.5,
+      "upper_ckt": 2751.7,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:MARUTI-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 41,
+      "ask": [
+        {
+          "price": 16274,
+          "volume": 41,
+          "ord": 5
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 16392,
+      "h": 16423,
+      "l": 16200,
+      "c": 16393,
+      "chp": -0.73,
+      "tick_Size": 1,
+      "ch": -119,
+      "ltq": 4,
+      "ltt": 1761301167,
+      "ltp": 16274,
+      "v": 208520,
+      "atp": 16292.9,
+      "lower_ckt": 14647,
+      "upper_ckt": 17901,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:SUNPHARMA-EQ": {
+      "totalbuyqty": 173,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1699,
+          "volume": 173,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1690,
+      "h": 1701.9,
+      "l": 1686,
+      "c": 1689.9,
+      "chp": 0.54,
+      "tick_Size": 0.1,
+      "ch": 9.1,
+      "ltq": 1,
+      "ltt": 1761301511,
+      "ltp": 1699,
+      "v": 994307,
+      "atp": 1695.87,
+      "lower_ckt": 1529.1,
+      "upper_ckt": 1868.9,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:TITAN-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 22,
+      "ask": [
+        {
+          "price": 3714.9,
+          "volume": 22,
+          "ord": 3
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 3775,
+      "h": 3781,
+      "l": 3706.1,
+      "c": 3772.3,
+      "chp": -1.52,
+      "tick_Size": 0.1,
+      "ch": -57.4,
+      "ltq": 1,
+      "ltt": 1761301701,
+      "ltp": 3714.9,
+      "v": 563296,
+      "atp": 3724.37,
+      "lower_ckt": 3343.5,
+      "upper_ckt": 4086.3,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BAJFINANCE-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 1332,
+      "ask": [
+        {
+          "price": 1089.75,
+          "volume": 1332,
+          "ord": 10
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1093.5,
+      "h": 1098.6,
+      "l": 1087.4,
+      "c": 1094.15,
+      "chp": -0.4,
+      "tick_Size": 0.05,
+      "ch": -4.4,
+      "ltq": 1,
+      "ltt": 1761301706,
+      "ltp": 1089.75,
+      "v": 6440277,
+      "atp": 1091.92,
+      "lower_ckt": 980.8,
+      "upper_ckt": 1198.7,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:HCLTECH-EQ": {
+      "totalbuyqty": 40,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1523.8,
+          "volume": 40,
+          "ord": 3
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1525,
+      "h": 1532.6,
+      "l": 1516.4,
+      "c": 1523.9,
+      "chp": -0.01,
+      "tick_Size": 0.1,
+      "ch": -0.1,
+      "ltq": 5,
+      "ltt": 1761301734,
+      "ltp": 1523.8,
+      "v": 1491451,
+      "atp": 1523.81,
+      "lower_ckt": 1371.5,
+      "upper_ckt": 1676.1,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ULTRACEMCO-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 14,
+      "ask": [
+        {
+          "price": 11918,
+          "volume": 14,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 12149,
+      "h": 12174,
+      "l": 11876,
+      "c": 12145,
+      "chp": -1.87,
+      "tick_Size": 1,
+      "ch": -227,
+      "ltq": 5,
+      "ltt": 1761301774,
+      "ltp": 11918,
+      "v": 318840,
+      "atp": 11959.32,
+      "lower_ckt": 10727,
+      "upper_ckt": 13109,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:WIPRO-EQ": {
+      "totalbuyqty": 7726,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 242.98,
+          "volume": 7726,
+          "ord": 25
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 245,
+      "h": 245.88,
+      "l": 242.16,
+      "c": 244.3,
+      "chp": -0.54,
+      "tick_Size": 0.01,
+      "ch": -1.32,
+      "ltq": 6,
+      "ltt": 1761301461,
+      "ltp": 242.98,
+      "v": 6803979,
+      "atp": 243.82,
+      "lower_ckt": 218.68,
+      "upper_ckt": 267.27,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:NESTLEIND-EQ": {
+      "totalbuyqty": 29,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1282,
+          "volume": 29,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1274.4,
+      "h": 1284.5,
+      "l": 1259.4,
+      "c": 1272.8,
+      "chp": 0.72,
+      "tick_Size": 0.1,
+      "ch": 9.2,
+      "ltq": 8,
+      "ltt": 1761301760,
+      "ltp": 1282,
+      "v": 1433533,
+      "atp": 1274.54,
+      "lower_ckt": 1153.8,
+      "upper_ckt": 1410.2,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:NTPC-EQ": {
+      "totalbuyqty": 1879,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 339.6,
+          "volume": 1879,
+          "ord": 8
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 342.45,
+      "h": 343.25,
+      "l": 338.15,
+      "c": 342.65,
+      "chp": -0.89,
+      "tick_Size": 0.05,
+      "ch": -3.05,
+      "ltq": 1,
+      "ltt": 1761301742,
+      "ltp": 339.6,
+      "v": 7584711,
+      "atp": 340.32,
+      "lower_ckt": 305.65,
+      "upper_ckt": 373.55,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:POWERGRID-EQ": {
+      "totalbuyqty": 503,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 288.5,
+          "volume": 503,
+          "ord": 5
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 289.65,
+      "h": 290.75,
+      "l": 286.55,
+      "c": 289.64,
+      "chp": -0.39,
+      "tick_Size": 0.05,
+      "ch": -1.14,
+      "ltq": 135,
+      "ltt": 1761301779,
+      "ltp": 288.5,
+      "v": 16350189,
+      "atp": 289.43,
+      "lower_ckt": 259.65,
+      "upper_ckt": 317.35,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ADANIENT-EQ": {
+      "totalbuyqty": 27,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 2504.2,
+          "volume": 27,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2554.8,
+      "h": 2554.8,
+      "l": 2497.7,
+      "c": 2545.8,
+      "chp": -1.63,
+      "tick_Size": 0.1,
+      "ch": -41.6,
+      "ltq": 10,
+      "ltt": 1761301674,
+      "ltp": 2504.2,
+      "v": 473765,
+      "atp": 2517.27,
+      "lower_ckt": 2253.8,
+      "upper_ckt": 2754.6,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BAJAJFINSV-EQ": {
+      "totalbuyqty": 82,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 2159.5,
+          "volume": 82,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2176.6,
+      "h": 2184,
+      "l": 2144.6,
+      "c": 2176.6,
+      "chp": -0.79,
+      "tick_Size": 0.1,
+      "ch": -17.1,
+      "ltq": 20,
+      "ltt": 1761300676,
+      "ltp": 2159.5,
+      "v": 517200,
+      "atp": 2160.77,
+      "lower_ckt": 1943.6,
+      "upper_ckt": 2375.4,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ONGC-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 370,
+      "ask": [
+        {
+          "price": 254.96,
+          "volume": 370,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 254,
+      "h": 257.4,
+      "l": 252.85,
+      "c": 252.31,
+      "chp": 1.05,
+      "tick_Size": 0.01,
+      "ch": 2.65,
+      "ltq": 1,
+      "ltt": 1761301764,
+      "ltp": 254.96,
+      "v": 17882209,
+      "atp": 255.46,
+      "lower_ckt": 229.46,
+      "upper_ckt": 280.45,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:COALINDIA-EQ": {
+      "totalbuyqty": 384,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 394.05,
+          "volume": 384,
+          "ord": 16
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 392.65,
+      "h": 395.45,
+      "l": 390.8,
+      "c": 392.65,
+      "chp": 0.36,
+      "tick_Size": 0.05,
+      "ch": 1.4,
+      "ltq": 68,
+      "ltt": 1761301732,
+      "ltp": 394.05,
+      "v": 4070949,
+      "atp": 393.47,
+      "lower_ckt": 354.65,
+      "upper_ckt": 433.45,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:TATASTEEL-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 863,
+      "ask": [
+        {
+          "price": 174.44,
+          "volume": 863,
+          "ord": 5
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 174.6,
+      "h": 177.35,
+      "l": 173.72,
+      "c": 174.16,
+      "chp": 0.16,
+      "tick_Size": 0.01,
+      "ch": 0.28,
+      "ltq": 1,
+      "ltt": 1761301789,
+      "ltp": 174.44,
+      "v": 25226376,
+      "atp": 175.14,
+      "lower_ckt": 156.99,
+      "upper_ckt": 191.88,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:DIVISLAB-EQ": {
+      "totalbuyqty": 23,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 6593,
+          "volume": 23,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 6564,
+      "h": 6675,
+      "l": 6535,
+      "c": 6565.5,
+      "chp": 0.42,
+      "tick_Size": 0.5,
+      "ch": 27.5,
+      "ltq": 2,
+      "ltt": 1761301465,
+      "ltp": 6593,
+      "v": 250640,
+      "atp": 6567.33,
+      "lower_ckt": 5934,
+      "upper_ckt": 7252,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:TECHM-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 8,
+      "ask": [
+        {
+          "price": 1453.7,
+          "volume": 8,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1465.4,
+      "h": 1468,
+      "l": 1450,
+      "c": 1463.4,
+      "chp": -0.66,
+      "tick_Size": 0.1,
+      "ch": -9.7,
+      "ltq": 1,
+      "ltt": 1761301738,
+      "ltp": 1453.7,
+      "v": 969361,
+      "atp": 1457.53,
+      "lower_ckt": 1308.4,
+      "upper_ckt": 1599,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:HINDALCO-EQ": {
+      "totalbuyqty": 1431,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 824.45,
+          "volume": 1431,
+          "ord": 23
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 811.35,
+      "h": 826.5,
+      "l": 811.35,
+      "c": 792.4,
+      "chp": 4.04,
+      "tick_Size": 0.05,
+      "ch": 32.05,
+      "ltq": 4,
+      "ltt": 1761301556,
+      "ltp": 824.45,
+      "v": 16905398,
+      "atp": 821.2,
+      "lower_ckt": 742,
+      "upper_ckt": 906.85,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:DRREDDY-EQ": {
+      "totalbuyqty": 1,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1283.6,
+          "volume": 1,
+          "ord": 1
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1280,
+      "h": 1288,
+      "l": 1265.5,
+      "c": 1279.4,
+      "chp": 0.33,
+      "tick_Size": 0.1,
+      "ch": 4.2,
+      "ltq": 10,
+      "ltt": 1761301424,
+      "ltp": 1283.6,
+      "v": 1167634,
+      "atp": 1280.9,
+      "lower_ckt": 1155.3,
+      "upper_ckt": 1411.9,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:CIPLA-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 54,
+      "ask": [
+        {
+          "price": 1584.4,
+          "volume": 54,
+          "ord": 1
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1625.1,
+      "h": 1625.1,
+      "l": 1581.1,
+      "c": 1645.1,
+      "chp": -3.69,
+      "tick_Size": 0.1,
+      "ch": -60.7,
+      "ltq": 1,
+      "ltt": 1761301772,
+      "ltp": 1584.4,
+      "v": 2941997,
+      "atp": 1595.91,
+      "lower_ckt": 1426,
+      "upper_ckt": 1742.8,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:INDUSINDBK-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 179,
+      "ask": [
+        {
+          "price": 755.05,
+          "volume": 179,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 759.95,
+      "h": 759.95,
+      "l": 750.85,
+      "c": 759.6,
+      "chp": -0.6,
+      "tick_Size": 0.05,
+      "ch": -4.55,
+      "ltq": 1,
+      "ltt": 1761301785,
+      "ltp": 755.05,
+      "v": 2001556,
+      "atp": 754.2,
+      "lower_ckt": 679.55,
+      "upper_ckt": 830.55,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:JSWSTEEL-EQ": {
+      "totalbuyqty": 2880,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1141.4,
+          "volume": 2880,
+          "ord": 3
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1140,
+      "h": 1151,
+      "l": 1131.5,
+      "c": 1138.2,
+      "chp": 0.28,
+      "tick_Size": 0.1,
+      "ch": 3.2,
+      "ltq": 30,
+      "ltt": 1761301542,
+      "ltp": 1141.4,
+      "v": 1320560,
+      "atp": 1140.7,
+      "lower_ckt": 1027.3,
+      "upper_ckt": 1255.5,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:GRASIM-EQ": {
+      "totalbuyqty": 3,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 2841.3,
+          "volume": 3,
+          "ord": 1
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 2864.6,
+      "h": 2877,
+      "l": 2823,
+      "c": 2864.6,
+      "chp": -0.81,
+      "tick_Size": 0.1,
+      "ch": -23.3,
+      "ltq": 5,
+      "ltt": 1761299987,
+      "ltp": 2841.3,
+      "v": 456226,
+      "atp": 2842.66,
+      "lower_ckt": 2557.2,
+      "upper_ckt": 3125.4,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BRITANNIA-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 17,
+      "ask": [
+        {
+          "price": 6053,
+          "volume": 17,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 6068,
+      "h": 6069.5,
+      "l": 5987,
+      "c": 6068,
+      "chp": -0.25,
+      "tick_Size": 0.5,
+      "ch": -15,
+      "ltq": 26,
+      "ltt": 1761300613,
+      "ltp": 6053,
+      "v": 82081,
+      "atp": 6027.68,
+      "lower_ckt": 5448,
+      "upper_ckt": 6658,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:M&M-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 67,
+      "ask": [
+        {
+          "price": 3625,
+          "volume": 67,
+          "ord": 7
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 3630,
+      "h": 3655.3,
+      "l": 3615.1,
+      "c": 3623.6,
+      "chp": 0.04,
+      "tick_Size": 0.1,
+      "ch": 1.4,
+      "ltq": 3,
+      "ltt": 1761301679,
+      "ltp": 3625,
+      "v": 1654500,
+      "atp": 3633.69,
+      "lower_ckt": 3262.5,
+      "upper_ckt": 3987.5,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:EICHERMOT-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 65,
+      "ask": [
+        {
+          "price": 6840,
+          "volume": 65,
+          "ord": 3
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 6894,
+      "h": 6909.5,
+      "l": 6792,
+      "c": 6884.5,
+      "chp": -0.65,
+      "tick_Size": 0.5,
+      "ch": -44.5,
+      "ltq": 40,
+      "ltt": 1761301779,
+      "ltp": 6840,
+      "v": 243740,
+      "atp": 6845.43,
+      "lower_ckt": 6156,
+      "upper_ckt": 7524,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BAJAJ-AUTO-EQ": {
+      "totalbuyqty": 65,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 9076.5,
+          "volume": 65,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 9070,
+      "h": 9099,
+      "l": 9012,
+      "c": 9047,
+      "chp": 0.33,
+      "tick_Size": 0.5,
+      "ch": 29.5,
+      "ltq": 1,
+      "ltt": 1761301324,
+      "ltp": 9076.5,
+      "v": 332130,
+      "atp": 9061,
+      "lower_ckt": 8169,
+      "upper_ckt": 9984,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:BPCL-EQ": {
+      "totalbuyqty": 149,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 330.45,
+          "volume": 149,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 330.15,
+      "h": 334.4,
+      "l": 327.2,
+      "c": 331.3,
+      "chp": -0.26,
+      "tick_Size": 0.05,
+      "ch": -0.85,
+      "ltq": 3,
+      "ltt": 1761301745,
+      "ltp": 330.45,
+      "v": 8260920,
+      "atp": 331.54,
+      "lower_ckt": 297.4,
+      "upper_ckt": 363.45,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:ADANIPORTS-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1463,
+      "h": 1463.5,
+      "l": 1422.3,
+      "c": 1453.1,
+      "chp": -1.66,
+      "tick_Size": 0.1,
+      "ch": -24.1,
+      "ltq": 6,
+      "ltt": 1761301669,
+      "ltp": 1429,
+      "v": 1907383,
+      "atp": 1434.56,
+      "lower_ckt": 1286.1,
+      "upper_ckt": 1571.9,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:IOC-EQ": {
+      "totalbuyqty": 1983,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 150.37,
+          "volume": 1983,
+          "ord": 8
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 150,
+      "h": 151.29,
+      "l": 149.15,
+      "c": 150.12,
+      "chp": 0.17,
+      "tick_Size": 0.01,
+      "ch": 0.25,
+      "ltq": 30,
+      "ltt": 1761301662,
+      "ltp": 150.37,
+      "v": 8519673,
+      "atp": 150.34,
+      "lower_ckt": 135.33,
+      "upper_ckt": 165.4,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:APOLLOHOSP-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 1998,
+      "ask": [
+        {
+          "price": 7837.5,
+          "volume": 1998,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 7975,
+      "h": 7982,
+      "l": 7824.5,
+      "c": 7968.5,
+      "chp": -1.64,
+      "tick_Size": 0.5,
+      "ch": -131,
+      "ltq": 3,
+      "ltt": 1761300869,
+      "ltp": 7837.5,
+      "v": 287555,
+      "atp": 7879.39,
+      "lower_ckt": 7054,
+      "upper_ckt": 8621,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:SHRIRAMFIN-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 404,
+      "ask": [
+        {
+          "price": 715.45,
+          "volume": 404,
+          "ord": 6
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 711.05,
+      "h": 723.35,
+      "l": 711.05,
+      "c": 709.65,
+      "chp": 0.82,
+      "tick_Size": 0.05,
+      "ch": 5.8,
+      "ltq": 15,
+      "ltt": 1761301693,
+      "ltp": 715.45,
+      "v": 6036751,
+      "atp": 716.52,
+      "lower_ckt": 643.9,
+      "upper_ckt": 786.95,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:LTIM-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 4,
+      "ask": [
+        {
+          "price": 5546,
+          "volume": 4,
+          "ord": 3
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 5618,
+      "h": 5662,
+      "l": 5520.5,
+      "c": 5617,
+      "chp": -1.26,
+      "tick_Size": 0.5,
+      "ch": -71,
+      "ltq": 1,
+      "ltt": 1761301576,
+      "ltp": 5546,
+      "v": 182417,
+      "atp": 5580.37,
+      "lower_ckt": 4991.5,
+      "upper_ckt": 6100.5,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:HEROMOTOCO-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 31,
+      "ask": [
+        {
+          "price": 5540.5,
+          "volume": 31,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 5615,
+      "h": 5625,
+      "l": 5484.5,
+      "c": 5588.5,
+      "chp": -0.86,
+      "tick_Size": 0.5,
+      "ch": -48,
+      "ltq": 1,
+      "ltt": 1761301506,
+      "ltp": 5540.5,
+      "v": 546761,
+      "atp": 5544.28,
+      "lower_ckt": 4986.5,
+      "upper_ckt": 6094.5,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:SBILIFE-EQ": {
+      "totalbuyqty": 0,
+      "totalsellqty": 664,
+      "ask": [
+        {
+          "price": 1839.8,
+          "volume": 664,
+          "ord": 4
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1860,
+      "h": 1864,
+      "l": 1831.8,
+      "c": 1852.7,
+      "chp": -0.7,
+      "tick_Size": 0.1,
+      "ch": -12.9,
+      "ltq": 1,
+      "ltt": 1761301667,
+      "ltp": 1839.8,
+      "v": 517403,
+      "atp": 1847.59,
+      "lower_ckt": 1655.9,
+      "upper_ckt": 2023.7,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    },
+    "NSE:PIDILITIND-EQ": {
+      "totalbuyqty": 133,
+      "totalsellqty": 0,
+      "ask": [
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "bids": [
+        {
+          "price": 1507.1,
+          "volume": 133,
+          "ord": 2
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        },
+        {
+          "price": 0,
+          "volume": 0,
+          "ord": 0
+        }
+      ],
+      "o": 1517.1,
+      "h": 1519.8,
+      "l": 1504,
+      "c": 1517.1,
+      "chp": -0.66,
+      "tick_Size": 0.1,
+      "ch": -10,
+      "ltq": 63,
+      "ltt": 1761301175,
+      "ltp": 1507.1,
+      "v": 414542,
+      "atp": 1508.9,
+      "lower_ckt": 1356.4,
+      "upper_ckt": 1657.8,
+      "expiry": "",
+      "oi": 0,
+      "oiflag": false,
+      "pdoi": 0,
+      "oipercent": 0
+    }
+  }
+}
