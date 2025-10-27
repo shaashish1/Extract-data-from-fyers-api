@@ -1,81 +1,38 @@
-# Fyers API Data Extraction System - Comprehensive Dependencies
-# Updated October 26, 2025 - Enterprise-Grade 1,278-Symbol System
-# Status: Production-Ready with 100% Validation Success
-# Install with: pip install -r requirements.txt
+# Fyers WebSocket Live
+# Professional Indian Stock Market Data Platform
 
-# Core Data Processing & Analytics
-pandas>=2.0.0                    # Data manipulation and analysis
-numpy>=1.21.0                    # Numerical computing
-python-dateutil>=2.8.0           # Date/time utilities
+# Core dependencies
+fyers-apiv3>=3.0.0
+pandas>=1.5.0
+numpy>=1.21.0
+pyarrow>=10.0.0
 
-# High-Performance Storage (10x faster than databases)
-pyarrow>=10.0.0                  # Parquet file format support
-fastparquet>=0.8.0               # Alternative Parquet implementation
+# Real-time and networking
+websocket-client>=1.4.0
+requests>=2.28.0
 
-# Fyers API v3 - Real-time Market Data (Primary Data Source)
-fyers-apiv3>=3.0.0               # Official Fyers API for real-time data
+# Data visualization and UI
+rich>=13.0.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
 
-# Network & Communication
-requests>=2.31.0                 # HTTP requests for API calls
-aiohttp>=3.8.0                   # Async HTTP client/server
-websocket-client>=1.6.0          # WebSocket support for real-time data
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2022.1
+configparser>=5.3.0
 
-# Configuration & Settings Management
-configparser>=5.3.0              # Configuration file parsing
-pyotp>=2.8.0			# required to generate otp from google Auth
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.991
 
-# Data Visualization & Analysis (Optional)
-matplotlib>=3.5.0                # Basic plotting and visualization
-seaborn>=0.11.0                  # Statistical data visualization
+# Optional: For advanced analytics
+scipy>=1.9.0
+scikit-learn>=1.1.0
+plotly>=5.11.0
 
-# Enterprise Features
-logging>=0.4.9.6                 # Enhanced logging capabilities
-threading>=1.0                   # Multi-threading support
-concurrent.futures>=3.1.0        # Concurrent processing
-
-# Development & Testing Dependencies (Optional - Uncomment if needed)
-# pytest>=7.0.0                  # Testing framework
-# pytest-cov>=4.0.0              # Code coverage
-# jupyter>=1.0.0                 # Jupyter notebook support
-# ipykernel>=6.0.0               # IPython kernel for Jupyter
-
-# Advanced Analytics (Optional - Uncomment if needed)
-# scikit-learn>=1.1.0            # Machine learning
-# plotly>=5.0.0                  # Interactive visualizations
-# dash>=2.0.0                    # Web application framework
-# ta-lib>=0.4.0                  # Technical analysis library
-
-# AWS Dependencies (Optional - For cloud deployment)
-# boto3>=1.26.0                  # AWS SDK for Python
-# aws-lambda-powertools>=1.25.0  # AWS Lambda utilities
-
-# System Architecture Dependencies
-# These are typically included with Python standard library:
-# - json (JSON processing)
-# - time (Time utilities)
-# - datetime (Date/time handling)
-# - os (Operating system interface)
-# - typing (Type hints)
-# - collections (Specialized container datatypes)
-
-# Performance & Optimization Notes:
-# - pyarrow: Provides 10x faster analytics vs SQL databases
-# - fyers-apiv3: Real-time data source (no delayed feeds)
-# - threading: Enables concurrent symbol processing
-# - configparser: Enterprise-grade configuration management
-
-# System Requirements:
-# - Python 3.8+ (recommended 3.10+)
-# - 4GB+ RAM for full 1,278-symbol operations
-# - 10GB+ disk space for historical data storage
-# - Stable internet connection for real-time data
-
-# Installation Instructions:
-# 1. Create virtual environment: python -m venv fyers_env
-# 2. Activate environment: fyers_env\Scripts\activate (Windows) or source fyers_env/bin/activate (Linux/Mac)
-# 3. Install dependencies: pip install -r requirements.txt
-# 4. Configure authentication: Edit auth/credentials.ini
-# 5. Run system validation: python scripts/comprehensive_data_validation.py
-
-# Validation Status: ✅ All dependencies tested and confirmed working
-# Last Validation: October 26, 2025 - 100% success rate
+# Optional: For Jupyter notebook support
+jupyter>=1.0.0
+notebook>=6.4.0
+ipython>=8.0.0
