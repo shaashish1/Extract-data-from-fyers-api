@@ -1,0 +1,2 @@
+# This file ensures the parquet directory is tracked by git
+# Parquet data files will be stored here
