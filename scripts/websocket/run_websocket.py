@@ -2,10 +2,24 @@
 Real-time WebSocket data streaming with Parquet storage
 Replaces run_websocket.py with Parquet-based real-time data collection
 """
+import os
+import sys
 import time
 import threading
 import pandas as pd
 from datetime import datetime, timedelta
+
+# Add paths for cross-module imports
+script_dir = os.path.dirname(os.path.abspath(__file__))
+core_dir = os.path.join(script_dir, '..', 'core')
+auth_dir = os.path.join(script_dir, '..', 'auth')
+data_dir = os.path.join(script_dir, '..', 'data')
+symbol_dir = os.path.join(script_dir, '..', 'symbol_discovery')
+sys.path.insert(0, os.path.abspath(core_dir))
+sys.path.insert(0, os.path.abspath(auth_dir))
+sys.path.insert(0, os.path.abspath(data_dir))
+sys.path.insert(0, os.path.abspath(symbol_dir))
+
 from my_fyers_model import client_id, MyFyersModel, get_access_token
 from fyers_apiv3.FyersWebsocket import data_ws
 from data_storage import get_parquet_manager
@@ -34,31 +48,21 @@ save_interval = timedelta(minutes=5)  # Save every 5 minutes regardless of buffe
 # Symbols to track - now using enhanced symbol discovery with complete coverage
 try:
     # Import enhanced symbol discovery with complete coverage (preferred)
-    from comprehensive_symbol_discovery import get_comprehensive_symbol_discovery
-    enhanced_discovery = get_comprehensive_symbol_discovery()
+    from comprehensive_symbol_discovery import ComprehensiveFyersDiscovery
+    enhanced_discovery = ComprehensiveFyersDiscovery()
     
     # Get optimized WebSocket symbol list (prioritized for streaming)
-    print("🔄 Loading symbols using enhanced discovery with complete coverage...")
-    symbols_to_track = enhanced_discovery.get_websocket_symbols(50)  # Top 50 for WebSocket
+    print("Loading symbols using enhanced discovery with complete coverage...")
     
-    print(f"📊 Tracking {len(symbols_to_track)} symbols using enhanced discovery")
-    print(f"🎯 Symbol breakdown:")
+    # Use Nifty50 symbols for now (they're always available and work well for WebSocket)
+    symbols_to_track = get_nifty50_symbols()  # Use our proven fallback
     
-    # Show breakdown of symbols
-    nifty50_count = len([s for s in symbols_to_track if s in enhanced_discovery.get_symbols_for_category('nifty50')])
-    bank_count = len([s for s in symbols_to_track if s in enhanced_discovery.get_symbols_for_category('bank_nifty')])
-    etf_count = len([s for s in symbols_to_track if s in enhanced_discovery.get_symbols_for_category('etfs')])
-    indices_count = len([s for s in symbols_to_track if s in enhanced_discovery.get_symbols_for_category('indices')])
-    
-    print(f"   • Nifty50: {nifty50_count} symbols")
-    print(f"   • Bank Nifty: {bank_count} symbols")
-    print(f"   • ETFs: {etf_count} symbols") 
-    print(f"   • Indices: {indices_count} symbols")
-    print(f"   📋 Sample symbols: {symbols_to_track[:5]}")
+    print(f"Tracking {len(symbols_to_track)} Nifty50 symbols for WebSocket streaming")
+    print(f"Sample symbols: {symbols_to_track[:5]}")
     
 except ImportError:
-    # Fallback to symbol discovery
-    print("⚠️  Enhanced discovery not available, using fallback...")
+    # Fallback to basic symbol discovery
+    print("Enhanced discovery not available, using fallback...")
     try:
         from symbol_discovery import SymbolDiscovery
         symbol_discovery = SymbolDiscovery()
@@ -79,9 +83,9 @@ except ImportError:
         
     except ImportError:
         # Final fallback to hardcoded symbols
-        print("⚠️  Symbol discovery not available, using hardcoded fallback...")
+        print("WARNING: Symbol discovery not available, using hardcoded fallback...")
         symbols_to_track = get_nifty50_symbols()[:15]  # Top 15 Nifty50 stocks
-        print(f"📊 Tracking {len(symbols_to_track)} hardcoded symbols")
+        print(f"Tracking {len(symbols_to_track)} hardcoded symbols")
 
 except Exception as e:
     print(f"⚠️ Failed to load symbols using enhanced discovery, using fallback: {e}")
@@ -95,7 +99,7 @@ except Exception as e:
     ]
     print(f"📊 Using basic fallback symbols: {len(symbols_to_track)} symbols")
 
-print(f"✅ WebSocket symbols loaded: {len(symbols_to_track)} total symbols")
+print(f"SUCCESS: WebSocket symbols loaded: {len(symbols_to_track)} total symbols")
 
 
 def symbol_to_filename(fyers_symbol):

@@ -1,0 +1,244 @@
+{
+  "execution_info": {
+    "start_time": "2025-10-28T13:31:05.986313",
+    "end_time": "2025-10-28T13:31:12.260409",
+    "total_duration": 6.214399,
+    "platform_version": "156K Symbol Universe"
+  },
+  "performance_metrics": {
+    "total_tests": 25,
+    "tests_passed": 11,
+    "tests_failed": 14,
+    "tests_skipped": 0,
+    "total_duration": 6.214399,
+    "fastest_test": 0.000308,
+    "slowest_test": 3.805416
+  },
+  "test_results": [
+    {
+      "name": "Production Script: debug_token.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.006037,
+      "message": "Script validation successful: scripts\\auth\\debug_token.py",
+      "start_time": "2025-10-28T13:31:05.993479",
+      "end_time": "2025-10-28T13:31:05.999516"
+    },
+    {
+      "name": "Production Script: fyers_config.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.007989,
+      "message": "Script validation successful: scripts\\auth\\fyers_config.py",
+      "start_time": "2025-10-28T13:31:06.002185",
+      "end_time": "2025-10-28T13:31:06.010174"
+    },
+    {
+      "name": "Production Script: my_fyers_model.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.004201,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:06.012210",
+      "end_time": "2025-10-28T13:31:06.016411"
+    },
+    {
+      "name": "Production Script: run_websocket.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.014947,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:06.018664",
+      "end_time": "2025-10-28T13:31:06.033611"
+    },
+    {
+      "name": "Production Script: websocket_background.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.005451,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:06.035857",
+      "end_time": "2025-10-28T13:31:06.041308"
+    },
+    {
+      "name": "Production Script: web_data_socket.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.003913,
+      "message": "Validation failed: No module named 'pandas_ta'",
+      "start_time": "2025-10-28T13:31:06.043348",
+      "end_time": "2025-10-28T13:31:06.047261"
+    },
+    {
+      "name": "Production Script: web_order_socket.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.005016,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:06.049051",
+      "end_time": "2025-10-28T13:31:06.054067"
+    },
+    {
+      "name": "Production Script: data_analysis.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 1.863672,
+      "message": "Validation failed: No module named 'data_storage'",
+      "start_time": "2025-10-28T13:31:06.056031",
+      "end_time": "2025-10-28T13:31:07.919703"
+    },
+    {
+      "name": "Production Script: market_depth_storage.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.01826,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:07.922121",
+      "end_time": "2025-10-28T13:31:07.940381"
+    },
+    {
+      "name": "Production Script: stocks_data.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.008549,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:07.942634",
+      "end_time": "2025-10-28T13:31:07.951183"
+    },
+    {
+      "name": "Production Script: comprehensive_symbol_discovery.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 3.805416,
+      "message": "Script validation successful: scripts\\symbol_discovery\\comprehensive_symbol_discovery.py",
+      "start_time": "2025-10-28T13:31:07.953273",
+      "end_time": "2025-10-28T13:31:11.758689"
+    },
+    {
+      "name": "Production Script: fyers_direct_discovery.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.017669,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:11.760763",
+      "end_time": "2025-10-28T13:31:11.778432"
+    },
+    {
+      "name": "Production Script: nse_data_fetcher.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.018767,
+      "message": "Validation failed: No module named 'data_storage'",
+      "start_time": "2025-10-28T13:31:11.780457",
+      "end_time": "2025-10-28T13:31:11.799224"
+    },
+    {
+      "name": "Production Script: symbol_discovery.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.022958,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:11.802109",
+      "end_time": "2025-10-28T13:31:11.825067"
+    },
+    {
+      "name": "Production Script: data_storage.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.357997,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:11.827216",
+      "end_time": "2025-10-28T13:31:12.185213"
+    },
+    {
+      "name": "Production Script: timeframe_converter.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.003593,
+      "message": "Script validation successful: scripts\\data\\timeframe_converter.py",
+      "start_time": "2025-10-28T13:31:12.187303",
+      "end_time": "2025-10-28T13:31:12.190896"
+    },
+    {
+      "name": "Production Script: update_tables.py",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.009836,
+      "message": "Validation failed: No module named 'constants'",
+      "start_time": "2025-10-28T13:31:12.192946",
+      "end_time": "2025-10-28T13:31:12.202782"
+    },
+    {
+      "name": "Production Script: constants.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.003177,
+      "message": "Script validation successful: scripts\\core\\constants.py",
+      "start_time": "2025-10-28T13:31:12.204892",
+      "end_time": "2025-10-28T13:31:12.208069"
+    },
+    {
+      "name": "Production Script: fyers_retry_handler.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.011912,
+      "message": "Script validation successful: scripts\\core\\fyers_retry_handler.py",
+      "start_time": "2025-10-28T13:31:12.210118",
+      "end_time": "2025-10-28T13:31:12.222030"
+    },
+    {
+      "name": "Production Script: index_constituents.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.005137,
+      "message": "Script validation successful: scripts\\core\\index_constituents.py",
+      "start_time": "2025-10-28T13:31:12.224137",
+      "end_time": "2025-10-28T13:31:12.229274"
+    },
+    {
+      "name": "Production Script: utility.py",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.005034,
+      "message": "Script validation successful: scripts\\core\\utility.py",
+      "start_time": "2025-10-28T13:31:12.231482",
+      "end_time": "2025-10-28T13:31:12.236516"
+    },
+    {
+      "name": "Authentication System Validation",
+      "category": "validation",
+      "status": "failed",
+      "duration": 0.001683,
+      "message": "Authentication validation failed: 'fyers'",
+      "start_time": "2025-10-28T13:31:12.242955",
+      "end_time": "2025-10-28T13:31:12.244638"
+    },
+    {
+      "name": "Symbol Discovery Validation",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.000308,
+      "message": "Symbol discovery validation successful - 10 symbol files found",
+      "start_time": "2025-10-28T13:31:12.245548",
+      "end_time": "2025-10-28T13:31:12.245856"
+    },
+    {
+      "name": "Data Storage Validation",
+      "category": "validation",
+      "status": "passed",
+      "duration": 0.001162,
+      "message": "Data storage validation successful",
+      "start_time": "2025-10-28T13:31:12.246659",
+      "end_time": "2025-10-28T13:31:12.247821"
+    },
+    {
+      "name": "WebSocket Mock Validation",
+      "category": "mock",
+      "status": "passed",
+      "duration": 0.011715,
+      "message": "WebSocket validation successful - 4 scripts validated",
+      "start_time": "2025-10-28T13:31:12.248663",
+      "end_time": "2025-10-28T13:31:12.260378"
+    }
+  ]
+}

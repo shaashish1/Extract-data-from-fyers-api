@@ -2,6 +2,13 @@ import os
 import pytz
 import pandas as pd
 import configparser
+import sys
+
+# Add the core directory to Python path for constants import
+script_dir = os.path.dirname(os.path.abspath(__file__))
+core_dir = os.path.join(script_dir, '..', 'core')
+sys.path.insert(0, os.path.abspath(core_dir))
+
 from constants import *
 from datetime import datetime
 from fyers_apiv3 import fyersModel
@@ -9,7 +16,7 @@ from fyers_apiv3.fyersModel import FyersModel
 
 config = configparser.ConfigParser()
 # Resolve credentials path relative to this module to avoid issues when running from different working directories
-config_path = os.path.join(os.path.dirname(__file__), '..', 'auth', 'credentials.ini')
+config_path = os.path.join(os.path.dirname(__file__), '..', '..', 'auth', 'credentials.ini')
 config.read(os.path.abspath(config_path))
 
 client_id = config['fyers']['client_id']
@@ -29,7 +36,7 @@ def get_access_token():
     token_path = file_name
     if not os.path.isabs(token_path):
         token_path = os.path.abspath(file_name)
-    auth_dir_token = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'auth', file_name))
+    auth_dir_token = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'auth', file_name))
 
     # Prefer token in working directory; fall back to auth/ directory
     if not os.path.exists(token_path) and os.path.exists(auth_dir_token):

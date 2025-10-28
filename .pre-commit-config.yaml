@@ -1,0 +1,171 @@
+# FYERS PLATFORM PRE-COMMIT HOOKS
+# ================================
+#
+# Enterprise-grade pre-commit hooks for the algorithmic trading platform.
+# Ensures code quality, security, and consistency before commits.
+#
+# Installation:
+#   pip install pre-commit
+#   pre-commit install
+#
+# Usage:
+#   pre-commit run --all-files  # Run on all files
+#   pre-commit run              # Run on staged files only
+
+repos:
+  # ==================== CODE FORMATTING ====================
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        name: 🎨 Code Formatting (Black)
+        args: [--line-length=100]
+        types: [python]
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: 📦 Import Sorting (isort)
+        args: [--profile=black, --line-length=100]
+        types: [python]
+
+  # ==================== CODE QUALITY ====================
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        name: 🔍 Code Linting (Flake8)
+        args: [--max-line-length=100, --extend-ignore=E203,W503]
+        types: [python]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1
+    hooks:
+      - id: mypy
+        name: 🏷️ Type Checking (MyPy)
+        args: [--ignore-missing-imports, --no-strict-optional]
+        types: [python]
+        additional_dependencies: [types-requests, types-pytz]
+
+  # ==================== SECURITY CHECKS ====================
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        name: 🔒 Security Linting (Bandit)
+        args: [-r, scripts/, -f, json]
+        types: [python]
+
+  - repo: https://github.com/gitguardian/ggshield
+    rev: v1.25.0
+    hooks:
+      - id: ggshield
+        name: 🛡️ Secret Detection (GitGuardian)
+        language: python
+        stages: [commit]
+
+  # ==================== FILE QUALITY ====================
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        name: ✂️ Remove Trailing Whitespace
+      - id: end-of-file-fixer
+        name: 📄 Fix End of Files
+      - id: check-yaml
+        name: 📋 Validate YAML Files
+      - id: check-json
+        name: 📊 Validate JSON Files
+      - id: check-toml
+        name: ⚙️ Validate TOML Files
+      - id: check-merge-conflict
+        name: 🔀 Check Merge Conflicts
+      - id: check-case-conflict
+        name: 📂 Check Case Conflicts
+      - id: check-added-large-files
+        name: 📦 Check Large Files
+        args: [--maxkb=1000]  # 1MB limit
+      - id: check-executables-have-shebangs
+        name: 📜 Check Executable Shebangs
+
+  # ==================== PYTHON SPECIFIC ====================
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-ast
+        name: 🐍 Python AST Check
+        types: [python]
+      - id: check-builtin-literals
+        name: 🔤 Check Builtin Literals
+        types: [python]
+      - id: debug-statements
+        name: 🐛 Check Debug Statements
+        types: [python]
+      - id: name-tests-test
+        name: 🧪 Test Naming Convention
+        types: [python]
+        files: ^tests/.*\.py$
+
+  # ==================== DOCUMENTATION ====================
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 6.3.0
+    hooks:
+      - id: pydocstyle
+        name: 📝 Docstring Style (pydocstyle)
+        args: [--convention=google]
+        types: [python]
+        exclude: ^(tests/|samples/|scripts/archive/)
+
+  # ==================== CUSTOM FYERS PLATFORM CHECKS ====================
+  - repo: local
+    hooks:
+      - id: fyers-script-organization
+        name: 🏗️ Fyers Script Organization Check
+        entry: python
+        language: python
+        args: [tests/run_all_tests.py, --quick]
+        pass_filenames: false
+        stages: [commit]
+        
+      - id: fyers-production-script-count
+        name: 📊 Production Script Count Check
+        entry: bash
+        language: system
+        args: [-c, 'script_count=$(find scripts/ -name "*.py" ! -name "__init__.py" ! -path "*/archive/*" | wc -l); if [ $script_count -lt 20 ]; then echo "❌ Expected at least 20 production scripts, found $script_count"; exit 1; fi; echo "✅ Production scripts: $script_count"']
+        pass_filenames: false
+        stages: [commit]
+        
+      - id: fyers-no-credentials-commit
+        name: 🔐 Prevent Credentials Commit
+        entry: bash
+        language: system
+        args: [-c, 'if git diff --cached --name-only | grep -E "(credentials\.ini|access_token\.txt|\.env)$"; then echo "❌ Attempting to commit sensitive files!"; exit 1; fi']
+        pass_filenames: false
+        stages: [commit]
+        
+      - id: fyers-imports-check
+        name: 📦 Critical Imports Check
+        entry: python
+        language: python
+        args: [-c, 'import sys; sys.path.insert(0, "scripts"); from my_fyers_model import MyFyersModel; from data_storage import get_parquet_manager; print("✅ Critical imports successful")']
+        pass_filenames: false
+        stages: [commit]
+        types: [python]
+
+# ==================== COMMIT MESSAGE VALIDATION ====================
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.10.0
+    hooks:
+      - id: commitizen
+        name: 📝 Commit Message Format
+        stages: [commit-msg]
+
+# ==================== CONFIGURATION ====================
+fail_fast: false  # Continue running hooks even if one fails
+minimum_pre_commit_version: 3.0.0
+
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+  - pre-push

@@ -1,11 +1,22 @@
 # Fyers API data extraction to Parquet files | fyers API V3 history data
 import os
+import sys
 import time
 import math
 import pandas as pd
 import datetime as dt
-from constants import *
 from datetime import datetime, date, timedelta
+
+# Add paths for cross-module imports
+script_dir = os.path.dirname(os.path.abspath(__file__))
+core_dir = os.path.join(script_dir, '..', 'core')
+auth_dir = os.path.join(script_dir, '..', 'auth')
+data_dir = os.path.join(script_dir, '..', 'data')
+sys.path.insert(0, os.path.abspath(core_dir))
+sys.path.insert(0, os.path.abspath(auth_dir))
+sys.path.insert(0, os.path.abspath(data_dir))
+
+from constants import *
 from my_fyers_model import MyFyersModel
 from data_storage import get_parquet_manager
 

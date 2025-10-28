@@ -3,11 +3,18 @@ Parquet file-based data storage module
 Replaces MySQL database functionality with efficient Parquet file storage
 """
 import os
+import sys
 import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
 from pathlib import Path
 from datetime import datetime, timedelta
+
+# Add core directory to path for constants import
+script_dir = os.path.dirname(os.path.abspath(__file__))
+core_dir = os.path.join(script_dir, '..', 'core')
+sys.path.insert(0, os.path.abspath(core_dir))
+
 from constants import time_zone
 
 class ParquetDataManager:

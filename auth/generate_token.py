@@ -189,11 +189,14 @@ def validate_authcode(client_id, app_secret, auth_code):
 
 
 def save_token_to_file(token, filename="access_token.txt"):
-    """Save the access token to a file"""
+    """Save the access token to a file with UTF-8 encoding (no BOM)"""
     try:
         token_file = Path(__file__).parent / filename
-        token_file.write_text(token)
+        # CRITICAL: Use UTF-8 encoding without BOM to prevent token corruption
+        token_file.write_text(token, encoding='utf-8')
         print(f"✅ Token saved to {token_file}")
+        print(f"📏 Token length: {len(token)} characters")
+        print(f"🔑 Token preview: {token[:50]}...")
         return True
     except Exception as e:
         print(f"❌ Error saving token: {e}")

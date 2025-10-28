@@ -1,7 +1,7 @@
 import time
 import threading
 import pandas as pd
-import pandas_ta as ta
+# import pandas_ta as ta  # Commented out - all usage is commented out anyway
 from datetime import datetime
 
 from my_fyers_model import client_id

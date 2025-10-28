@@ -1,0 +1,73 @@
+{
+  "validation_info": {
+    "timestamp": "2025-10-28T13:26:05.213580",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python_version": "3.14.0",
+    "project_root": "D:\\Learn_Coding\\extract-data-from-fyers-api\\Extract-data-from-fyers-api"
+  },
+  "validation_results": [
+    {
+      "component": "Python Environment",
+      "status": "passed",
+      "message": "Python 3.14.0 - Compatible",
+      "details": "",
+      "timestamp": "2025-10-28T13:25:58.698645"
+    },
+    {
+      "component": "Dependencies",
+      "status": "failed",
+      "message": "Missing packages: websocket-client",
+      "details": "Install with: pip install websocket-client",
+      "timestamp": "2025-10-28T13:26:04.995129"
+    },
+    {
+      "component": "Directory Structure",
+      "status": "passed",
+      "message": "All 18 directories present",
+      "details": "Validated: 18 directories",
+      "timestamp": "2025-10-28T13:26:05.002751"
+    },
+    {
+      "component": "Configuration Files",
+      "status": "passed",
+      "message": "All configuration files validated",
+      "details": "✅ credentials.ini found\n✅ access_token.txt found\n✅ requirements.txt found",
+      "timestamp": "2025-10-28T13:26:05.008291"
+    },
+    {
+      "component": "Production Scripts",
+      "status": "passed",
+      "message": "Production scripts organized: 21 scripts",
+      "details": "✅ auth: 3 scripts\n✅ websocket: 4 scripts\n✅ market_data: 3 scripts\n✅ symbol_discovery: 4 scripts\n✅ data: 3 scripts\n✅ core: 4 scripts\n📁 archive: 43 preserved scripts",
+      "timestamp": "2025-10-28T13:26:05.019285"
+    },
+    {
+      "component": "Data Structure",
+      "status": "passed",
+      "message": "Data structure validated",
+      "details": "✅ symbols: 10 files\n✅ fyers_symbols: 2 files\n✅ market_depth: 3 files",
+      "timestamp": "2025-10-28T13:26:05.037059"
+    },
+    {
+      "component": "Samples Framework",
+      "status": "passed",
+      "message": "Samples framework validated: 7 categories",
+      "details": "account_info: 2 samples\nbroker_info: 1 samples\nmarket_data: 4 samples\noption-chain: 1 samples\ntransaction: 9 samples\ntransaction_info: 5 samples\nwebsocket: 20 samples",
+      "timestamp": "2025-10-28T13:26:05.049953"
+    },
+    {
+      "component": "Git Repository",
+      "status": "warning",
+      "message": "Uncommitted changes detected",
+      "details": "Run 'git status' to see changes",
+      "timestamp": "2025-10-28T13:26:05.196197"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 6,
+    "warnings": 1,
+    "failed": 1,
+    "overall_status": "SYSTEM ISSUES DETECTED"
+  }
+}
