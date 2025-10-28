@@ -7,8 +7,9 @@ import os
 import time
 import threading
 
-# Add project root to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add project root to path (parent directory of tests/)
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 def test_websocket_live():
     """Test live WebSocket connection"""
@@ -20,8 +21,9 @@ def test_websocket_live():
         from fyers_apiv3.FyersWebsocket import data_ws
         from scripts.core.index_constituents import get_nifty50_symbols
         
-        # Get token
-        with open('auth/access_token.txt', 'r', encoding='utf-8') as f:
+        # Get token from auth directory (one level up from tests/)
+        auth_file = os.path.join(project_root, 'auth', 'access_token.txt')
+        with open(auth_file, 'r', encoding='utf-8') as f:
             token = f.read().strip()
         
         client_id = "8I122G8NSD-100"
@@ -56,9 +58,10 @@ def test_websocket_live():
             fyers.keep_running()
         
         # Create WebSocket
+        log_dir = os.path.join(project_root, 'logs')
         fyers = data_ws.FyersDataSocket(
             access_token=access_token,
-            log_path="logs",  # Store logs in logs/ directory
+            log_path=log_dir,  # Store logs in project logs/ directory
             litemode=False,
             write_to_file=False,
             reconnect=True,

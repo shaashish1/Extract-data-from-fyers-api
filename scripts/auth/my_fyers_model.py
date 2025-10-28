@@ -25,7 +25,11 @@ redirect_url = config['fyers']['redirect_url']
 response_type = config['fyers']['response_type']
 state = config['fyers']['state']
 grant_type = config['fyers']['grant_type']
-log_dir = config['fyers']['log_dir']
+
+# Resolve log_dir to absolute path relative to project root
+project_root = os.path.join(os.path.dirname(__file__), '..', '..')
+log_dir = os.path.abspath(os.path.join(project_root, config['fyers']['log_dir']))
+
 file_name = config['fyers']['file_name']
 time_zone = config['fyers']['time_zone']
 verbose = config['fyers']['verbose']

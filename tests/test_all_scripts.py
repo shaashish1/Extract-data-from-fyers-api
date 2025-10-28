@@ -6,8 +6,9 @@ import sys
 import os
 from datetime import datetime, timedelta
 
-# Add project root to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add project root to path (parent directory of tests/)
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 def test_authentication():
     """Test 1: Authentication System"""
