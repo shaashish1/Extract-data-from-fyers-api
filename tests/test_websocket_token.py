@@ -42,7 +42,7 @@ print("-" * 80)
 
 fyers = data_ws.FyersDataSocket(
     access_token=access_token,
-    log_path="",
+    log_path="logs",  # Store logs in logs/ directory
     litemode=False,
     write_to_file=False,
     reconnect=True,
