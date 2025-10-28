@@ -1,0 +1,32 @@
+{
+  "last_update": "2025-10-28T18:20:16.401727",
+  "row_count": 28438,
+  "url": "https://public.fyers.in/sym_details/MCX_COM.csv",
+  "source_hash": "0218214f3c19f6a4200c3a296bac79a64e02fd23516db02213f0e7010e5a1447",
+  "sdk_version": "3.0.0",
+  "segment": "MCX_COM",
+  "columns": [
+    "1120251028456791",
+    "NATURALGAS 25 Oct 28 FUT",
+    "30",
+    "1",
+    "0.1",
+    "Unnamed: 5",
+    "0900-2330|1815-1915:",
+    "2025-10-28",
+    "1761674400",
+    "MCX:NATURALGAS25OCTFUT",
+    "11",
+    "20",
+    "456791",
+    "NATURALGAS",
+    "401",
+    "-1.0",
+    "XX",
+    "1120000000401",
+    "1761674400.1",
+    "0",
+    "0.0"
+  ],
+  "file_size": 5456403
+}

@@ -1,0 +1,32 @@
+{
+  "last_update": "2025-10-28T18:20:13.088685",
+  "row_count": 11191,
+  "url": "https://public.fyers.in/sym_details/NSE_CD.csv",
+  "source_hash": "361cfbcee56151323f1d857d8ac492f95f6ea642fb60c27ae87150537795d88c",
+  "sdk_version": "3.0.0",
+  "segment": "NSE_CD",
+  "columns": [
+    "101225102910017",
+    "GBPINR 25 Oct 29 109.5 CE",
+    "19",
+    "1",
+    "0.0025",
+    "Unnamed: 5",
+    "0900-1700|1815-1915:",
+    "2025-10-27",
+    "1761721200",
+    "NSE:GBPINR25OCT109.5CE",
+    "10",
+    "12",
+    "10017",
+    "GBPINR",
+    "26",
+    "109.5",
+    "CE",
+    "101200000026",
+    "None",
+    "0",
+    "0.0"
+  ],
+  "file_size": 1933192
+}

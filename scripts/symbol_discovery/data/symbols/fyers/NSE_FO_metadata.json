@@ -1,0 +1,32 @@
+{
+  "last_update": "2025-10-28T18:20:12.229928",
+  "row_count": 88878,
+  "url": "https://public.fyers.in/sym_details/NSE_FO.csv",
+  "source_hash": "ef5e1b89c68b260d5eee963326be1cf8d03a95697917c076dd37c41d720dbeb5",
+  "sdk_version": "3.0.0",
+  "segment": "NSE_FO",
+  "columns": [
+    "1011251028100002",
+    "LTF 25 Oct 28 295 PE",
+    "15",
+    "4462",
+    "0.05",
+    "Unnamed: 5",
+    "0915-1530|1815-1915:",
+    "2025-10-27",
+    "1761645600",
+    "NSE:LTF25OCT295PE",
+    "10",
+    "11",
+    "100002",
+    "LTF",
+    "24948",
+    "295.0",
+    "PE",
+    "101000000024948",
+    "None",
+    "0",
+    "0.0"
+  ],
+  "file_size": 16292339
+}
