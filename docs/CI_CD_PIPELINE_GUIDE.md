@@ -3,6 +3,27 @@
 
 ---
 
+## ⚠️ **CRITICAL: NO MOCK DATA POLICY**
+
+**This project uses REAL credentials in CI/CD, not mocks.**
+
+### Why No Mock Data?
+1. ✅ **Tokens expire in 24 hours** - Safe to commit
+2. ✅ **Private repository** - No public exposure
+3. ✅ **Real testing** - Validates actual API integration
+4. ✅ **Production parity** - CI matches production exactly
+5. ✅ **Simpler code** - No mock/real switching logic
+
+### What This Means:
+- ✅ `auth/access_token.txt` is **committed to git**
+- ✅ GitHub Actions uses **real Fyers credentials**
+- ✅ CI/CD tests with **live API calls**
+- ❌ **No environment variables** for secrets
+- ❌ **No mock credential generation**
+- ❌ **No dummy data** in workflows
+
+---
+
 ## 📊 Pipeline Status
 
 [![Quick CI](https://github.com/shaashish1/Extract-data-from-fyers-api/actions/workflows/quick-ci.yml/badge.svg)](https://github.com/shaashish1/Extract-data-from-fyers-api/actions/workflows/quick-ci.yml)
@@ -59,25 +80,25 @@ We use **two complementary CI/CD pipelines** for robust validation:
 ## 🔧 Pipeline Stages Explained
 
 ### Stage 1: System Validation 🔍
-**Purpose:** Validate environment and dependencies
+**Purpose:** Validate environment and dependencies with REAL credentials
 
 **What it does:**
 - ✅ Checks Python version (3.11+)
 - ✅ Installs all dependencies
-- ✅ Creates mock credentials for CI
+- ✅ Uses committed `auth/access_token.txt` (real token)
 - ✅ Validates directory structure
-- ✅ Runs system health check
+- ✅ Runs system health check with live API
 
 **Success Criteria:**
 - All required packages installed
 - Directory structure matches expected layout
-- Mock credentials created successfully
+- Real credentials available and valid
 
 **Typical Issues:**
 - Missing dependencies → Auto-handled with fallbacks
-- File path issues → Mock files created
+- Token expired → Update `auth/access_token.txt` and commit
 
-**Fix:** Pipeline now uses `continue-on-error` for non-critical checks
+**Important:** NO mock credentials - uses real tokens from repository
 
 ---
 
@@ -85,7 +106,7 @@ We use **two complementary CI/CD pipelines** for robust validation:
 **Purpose:** Test individual components in isolation
 
 **What it does:**
-- ✅ Runs authentication system tests
+- ✅ Runs authentication system tests (with real API)
 - ✅ Runs script organization tests
 - ✅ Generates coverage reports
 - ✅ Parallel execution for speed
@@ -95,7 +116,7 @@ We use **two complementary CI/CD pipelines** for robust validation:
 - Coverage > 70%
 
 **Typical Issues:**
-- Missing mock objects → Pre-configured mocks added
+- Token expired → Regenerate and commit new token
 - Import failures → Path resolution improved
 
 ---
@@ -246,10 +267,28 @@ echo "mock_token_for_ci_testing" > auth/access_token.txt
 pip install -r requirements.txt || echo "⚠️ Some optional dependencies skipped"
 
 # Make validation non-blocking for warnings
-exit 0  # Don't fail the build, just warn
+---
+
+### Issue 2: System Validation Failures ❌
+**Symptom:**
+```
+🔍 System Validation - Failed in 2 seconds
 ```
 
-**Result:** ✅ System validation now passes with mock setup
+**Root Cause:**
+- Token expired (tokens are valid for 24 hours)
+- Missing auth files
+
+**Fix:**
+```bash
+# Regenerate token and commit
+python generate_token.py  # Follow browser auth flow
+git add auth/access_token.txt
+git commit -m "chore: update access token"
+git push
+```
+
+**Result:** ✅ System validation uses real credentials from repository
 
 ---
 
@@ -267,19 +306,23 @@ pyotp>=2.8.0  # For authentication token generation
 
 ---
 
-### Issue 4: File Path Issues in CI
+### Issue 4: Token Expiration in CI
 **Symptom:**
 ```
-FileNotFoundError: auth/credentials.ini
+Authentication failed: Token expired
 ```
 
-**Fix Applied:**
+**Fix:**
 ```bash
-# Create all required directories and mock files
-mkdir -p auth data/parquet tests/reports
-touch auth/credentials.ini.example
-echo "mock_token" > auth/access_token.txt
+# Generate new token (valid for 24 hours)
+python generate_token.py
+# Commit new token
+git add auth/access_token.txt
+git commit -m "chore: refresh access token"
+git push
 ```
+
+**Note:** Tokens expire in 24 hours. Simply regenerate and commit when needed.
 
 ---
 

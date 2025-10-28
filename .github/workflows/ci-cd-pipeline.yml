@@ -34,18 +34,11 @@ jobs:
         # Install remaining from requirements
         pip install -r requirements.txt || echo "⚠️ Some optional dependencies skipped"
         
-    - name: 🔍 Create Mock Credentials (for testing)
-      run: |
-        # Create mock auth directory and files for CI testing
-        mkdir -p auth
-        touch auth/credentials.ini.example
-        echo "mock_token_for_ci_testing" > auth/access_token.txt
-        echo "✅ Mock credentials created for CI testing"
-        
     - name: 🔍 Run System Validation
       continue-on-error: false  # This should pass for deployment
       run: |
-        echo "🔍 Running system validation..."
+        echo "🔍 Running system validation with real credentials..."
+        echo "ℹ️ Using committed auth files (tokens expire in 24 hours, repo is private)"
         python tests/run_all_tests.py --validation-only || {
           echo "⚠️ System validation had warnings, continuing..."
           exit 0  # Don't fail the build, just warn

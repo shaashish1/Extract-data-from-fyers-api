@@ -1,5 +1,33 @@
 # Copilot Instructions for Fyers API Data Extraction Project
 
+## ⚠️ **CRITICAL PROJECT PRINCIPLES** (MUST FOLLOW)
+
+### 🚫 **NO MOCK OR DUMMY DATA POLICY**
+**NEVER use mock, dummy, or fake credentials/tokens in this project.**
+
+**Rationale:**
+1. ✅ **Tokens expire in 24 hours** - Safe to commit to repository
+2. ✅ **Private repository** - No public exposure risk
+3. ✅ **Real data testing** - Ensures CI/CD validates actual functionality
+4. ✅ **Production parity** - CI environment matches production exactly
+5. ✅ **Simpler architecture** - No mock/real switching logic needed
+
+**What this means:**
+- ✅ **DO:** Commit real `auth/access_token.txt` to git
+- ✅ **DO:** Use actual Fyers API credentials in CI/CD
+- ✅ **DO:** Test with live data in GitHub Actions
+- ❌ **DON'T:** Create mock tokens or dummy credentials
+- ❌ **DON'T:** Use environment variables for secrets (unnecessary complexity)
+- ❌ **DON'T:** Add auth files to .gitignore (they should be committed)
+
+**CI/CD Implication:**
+- GitHub Actions workflows use **committed auth files** directly
+- System validation runs with **real credentials**
+- WebSocket tests can use **actual live streaming**
+- No mock setup steps needed in workflows
+
+---
+
 ## 🚀 PROJECT STATUS & DEVELOPMENT PROGRESS
 
 ### ✅ **COMPLETED INFRASTRUCTURE** (Do NOT rework these)
