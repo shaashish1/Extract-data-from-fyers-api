@@ -13,6 +13,7 @@ from urllib import parse
 import sys
 import configparser
 from pathlib import Path
+import base64
 
 def load_credentials():
     """Load credentials from credentials.ini file"""
@@ -166,15 +167,22 @@ def token(client_id, app_id, redirect_uri, app_type, access_token):
         return [ERROR, str(e)]
 
 
-def validate_authcode(client_id, app_secret, auth_code):
-    """Step 6: Convert Auth Code to Access Token (when needed)"""
+def validate_authcode(app_id_full, app_secret, auth_code):
+    """Step 6: Convert Auth Code to Access Token (when needed)
+    Notes:
+    - appIdHash must be SHA-256 of APP_ID (not fyers login/client id)
+    - Authorization header may accept Basic with just secret, but some setups expect base64(app_id:app_secret)
+    """
     try:
         payload = {
             "grant_type": "authorization_code",
-            "appIdHash": hashlib.sha256(client_id.encode()).hexdigest(),
+            # As per FYERS v3, hash must be of full client id (e.g., APP_ID-APP_TYPE)
+            "appIdHash": hashlib.sha256(app_id_full.encode()).hexdigest(),
             "code": auth_code
         }
-        headers = {'Authorization': f'Basic {app_secret}'}
+        # Use Basic auth with base64("APP_ID-APP_TYPE:APP_SECRET")
+        basic_token = base64.b64encode(f"{app_id_full}:{app_secret}".encode()).decode()
+        headers = {'Authorization': f'Basic {basic_token}'}
         result_string = requests.post(url=URL_VALIDATE_AUTH_CODE, json=payload, headers=headers)
 
         if result_string.status_code != 200:
@@ -253,12 +261,14 @@ def main():
     token_or_auth_code = result[1]
     
     # Check if we got a final token or need to validate auth code
-    if len(token_or_auth_code) > 50:  # Likely a final token
+    force_validate = any(arg in ("--force-validate", "-V") for arg in sys.argv[1:])
+    if not force_validate and len(token_or_auth_code) > 50:  # Likely a final token
         final_token = token_or_auth_code
         print("✅ Final token received directly")
-    else:  # Likely an auth code that needs validation
+        print("💡 Use --force-validate to obtain token via validate-authcode flow if needed.")
+    else:  # Validate auth code regardless when forced
         print("Step 6: Validating auth code...")
-        result = validate_authcode(CLIENT_ID, APP_SECRET, token_or_auth_code)
+        result = validate_authcode(f"{APP_ID}-{APP_TYPE}", APP_SECRET, token_or_auth_code if len(token_or_auth_code) <= 50 else token_or_auth_code)
         if result[0] == ERROR:
             print(f"❌ Error validating auth code: {result[1]}")
             return

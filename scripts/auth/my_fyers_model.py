@@ -35,8 +35,13 @@ time_zone = config['fyers']['time_zone']
 verbose = config['fyers']['verbose']
 
 
-def get_access_token():
-    # Resolve possible locations for the token file: cwd or auth directory
+def get_client_id() -> str:
+    """Return the configured client_id (APP_ID-APP_TYPE)."""
+    return client_id
+
+
+def get_access_token_path() -> str:
+    """Return the resolved path to the access_token file."""
     token_path = file_name
     if not os.path.isabs(token_path):
         token_path = os.path.abspath(file_name)
@@ -45,6 +50,12 @@ def get_access_token():
     # Prefer token in working directory; fall back to auth/ directory
     if not os.path.exists(token_path) and os.path.exists(auth_dir_token):
         token_path = auth_dir_token
+    return token_path
+
+
+def get_access_token():
+    # Resolve possible locations for the token file: cwd or auth directory
+    token_path = get_access_token_path()
 
     if not os.path.exists(token_path):
         session = fyersModel.SessionModel(
@@ -62,27 +73,58 @@ def get_access_token():
         session.set_token(auth_code)
         access_token = session.generate_token()['access_token']
 
-        # Write token to auth directory token path for consistency
-        write_path = auth_dir_token if os.path.isdir(os.path.dirname(auth_dir_token)) else token_path
-        with open(write_path, 'w') as f:
+        # Write token to resolved token path for consistency
+        write_path = get_access_token_path()
+        os.makedirs(os.path.dirname(write_path), exist_ok=True)
+        with open(write_path, 'w', encoding='utf-8') as f:
             f.write(access_token)
     else:
-        with open(token_path, 'r') as f:
-            access_token = f.read()
+        with open(token_path, 'r', encoding='utf-8') as f:
+            access_token = f.read().strip()
     return access_token
+
+
+def get_full_token() -> str:
+    """Return token in the format expected by Fyers v3 SDK: APP_ID:ACCESS_TOKEN.
+    Many Fyers APIs require the token to be prefixed with the application id (client_id before dash).
+    """
+    access = get_access_token()
+    app_id = client_id.split('-')[0]
+    return f"{app_id}:{access}"
 
 
 class MyFyersModel(object):
 
     def __init__(self):
-        self.token = get_access_token()
-        self.fyers_model = FyersModel(client_id=client_id, token=get_access_token(), log_path=log_dir, is_async=False)
+        # Use full token required by Fyers: APP_ID:ACCESS_TOKEN
+        self.token = get_full_token()
+        self.fyers_model = FyersModel(client_id=client_id, token=self.token, log_path=log_dir, is_async=False)
 
     def get_fyre_model(self):
         return self.fyers_model
 
     def get_token(self):
         return self.token
+
+    def preflight_auth_check(self) -> dict:
+        """Perform a tiny authenticated call to validate token before heavy jobs.
+        Prefer quotes() probe since it's the most representative for data access."""
+        try:
+            # Probe 1: Quotes on a common symbol
+            q = self.fyers_model.quotes(data={"symbols": "NSE:SBIN-EQ"})
+            if isinstance(q, dict) and q.get('s') == 'ok':
+                return q
+            # Probe 2: market status
+            ms = self.fyers_model.market_status()
+            if isinstance(ms, dict) and ms.get('s') == 'ok':
+                return ms
+            # Probe 3: profile
+            pf = self.fyers_model.get_profile()
+            if isinstance(pf, dict) and pf.get('s') == 'ok':
+                return pf
+            return {"s": "error", "message": f"quotes/market_status/profile failed"}
+        except Exception as e:
+            return {"s": "error", "message": str(e)}
 
     # User Details
     def get_profile(self):

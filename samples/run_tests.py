@@ -1,3 +1,10 @@
+
+# Add scripts directory to path for authentication
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'scripts'))
+from auth.my_fyers_model import MyFyersModel
+
 #!/usr/bin/env python3
 """
 🧪 Fyers WebSocket Live - Master Test Runner
@@ -45,7 +52,7 @@ class MasterTestRunner:
         
         try:
             # Test our existing authentication system
-            from my_fyers_model import MyFyersModel
+            from scripts.auth.my_fyers_model import MyFyersModel
             
             # Initialize Fyers model (will auto-load token)
             fyers = MyFyersModel()
@@ -111,18 +118,18 @@ class MasterTestRunner:
         
         try:
             # Import symbol discovery
-            from comprehensive_symbol_discovery import EnhancedFyersSymbolManager
-            from my_fyers_model import MyFyersModel
+            from scripts.symbol_discovery.comprehensive_symbol_discovery import ComprehensiveFyersDiscovery
+            from scripts.auth.my_fyers_model import MyFyersModel
             
             # Test discovery
             fyers = MyFyersModel()
-            manager = EnhancedFyersSymbolManager(fyers)
+            discovery = ComprehensiveFyersDiscovery()
             
             # Quick test with limited symbols
-            test_symbols = manager.discover_nse_equity_sample(limit=50)
+            categories, df, all_symbols = discovery.discover_complete_universe()
             
-            if len(test_symbols) > 10:
-                return True, f"Symbol discovery working - found {len(test_symbols)} symbols"
+            if len(all_symbols) > 100:
+                return True, f"Symbol discovery working - found {len(all_symbols)} symbols"
             else:
                 return False, "Symbol discovery found too few symbols"
                 

@@ -1,0 +1,16 @@
+{
+  "nifty50": [],
+  "nifty100": [],
+  "nifty200": [],
+  "nifty_next50": [],
+  "bank_nifty": [],
+  "fin_nifty": [],
+  "midcap": [],
+  "smallcap": [],
+  "etfs": [],
+  "option_symbols": {
+    "nifty": [],
+    "banknifty": [],
+    "finnifty": []
+  }
+}

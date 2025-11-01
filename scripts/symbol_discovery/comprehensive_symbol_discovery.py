@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 """
-Comprehensive FYERS Symbol Discovery - Production Grade
-🚀 COMPREHENSIVE SYMBOL UNIVERSE DISCOVERY SYSTEM
+NSE-Focused FYERS Symbol Discovery - Production Grade
+🚀 NSE-OPTIMIZED SYMBOL UNIVERSE DISCOVERY SYSTEM
 
-This script fetches 100,000+ symbols from ALL FYERS market segments:
-- Uses both FYERS API endpoints AND CSV fallbacks for maximum coverage
+This script fetches ~100,000+ symbols from NSE market segments only:
+- Uses both FYERS API endpoints AND CSV fallbacks for maximum NSE coverage
 - Intelligent token management with multiple fallback strategies  
-- Advanced categorization into 18+ detailed categories
+- Advanced categorization into NSE-focused categories
 - Complete options chain generation with dynamic strikes
-- Alternative assets: Commodities, Currency, Bonds, ETFs
-- Real-time caching with Redis support (optional)
+- NSE assets: Cash Market, F&O, Currency Derivatives
+- Real-time caching with atomic operations
 
-EXPECTED OUTPUT: 100,000+ Total Symbols
-📈 EQUITY SEGMENT (8,000+ symbols): Nifty50/100/200, SmallCap, MidCap
-📊 INDEX SEGMENT (500+ symbols): Major, Sectoral, ETFs
-📈 DERIVATIVES SEGMENT (80,000+ symbols): Complete options chains, futures
-🌍 ALTERNATIVE ASSETS (1,000+ symbols): Commodities, Currency, Bonds
+EXPECTED OUTPUT: ~108,390 NSE Symbols
+📈 NSE_CM (Cash Market): ~8,717 symbols (Nifty50/100/200, SmallCap, MidCap)
+📊 NSE_FO (F&O): ~88,502 symbols (Futures & Options)
+💱 NSE_CD (Currency): ~11,171 symbols (Currency derivatives)
 
 Data Sources (Multi-tier strategy):
 1. FYERS API Instruments endpoint (Primary - JSON with metadata)
-2. FYERS Public CSV files (Fallback - Complete coverage)
+2. NSE CSV files from FYERS (Fallback - Complete NSE coverage)
 3. Token management via my_fyers_model.py (Integrated auth)
 
 Path: Extract-data-from-fyers-api/scripts/comprehensive_symbol_discovery.py
@@ -89,14 +88,12 @@ try:
 except Exception:
     fyers_sdk_version = "3.0.0"
 
-# Enhanced CSV URLs with additional endpoints
+# NSE-focused CSV URLs for optimized discovery
 CSV_ENDPOINTS = {
     'NSE_CM': 'https://public.fyers.in/sym_details/NSE_CM.csv',  # Cash Market - ~8,717 symbols
     'NSE_FO': 'https://public.fyers.in/sym_details/NSE_FO.csv',  # Futures & Options - ~88,502 symbols  
     'NSE_CD': 'https://public.fyers.in/sym_details/NSE_CD.csv',  # Currency Derivatives - ~11,171 symbols
-    'BSE_CM': 'https://public.fyers.in/sym_details/BSE_CM.csv',  # BSE Cash Market
-    'BSE_FO': 'https://public.fyers.in/sym_details/BSE_FO.csv',  # BSE F&O
-    'MCX_COM': 'https://public.fyers.in/sym_details/MCX_COM.csv', # MCX Commodities
+    # BSE and MCX segments removed for focused NSE-only discovery
 }
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -108,27 +105,25 @@ except Exception:
 
 class EnhancedFyersSymbolManager:
     """
-    🚀 COMPREHENSIVE FYERS Symbol Manager - Production Grade
+    🚀 NSE-FOCUSED FYERS Symbol Manager - Production Grade
     
-    Multi-tier symbol discovery system:
+    Optimized NSE-only symbol discovery system:
     1. FYERS API Instruments endpoint (Primary - JSON with full metadata)
-    2. FYERS Public CSV files (Fallback - Complete coverage)  
+    2. NSE CSV files only (Fallback - Complete NSE coverage)  
     3. Intelligent token management via MyFyersModel
-    4. Advanced categorization into 18+ categories
+    4. Advanced categorization into NSE-focused categories
     5. Options chain generation with dynamic strikes
     6. Real-time caching with atomic operations
     
-    Expected Output: 100,000+ symbols across all market segments
+    Expected Output: ~100,000+ NSE symbols across all segments
     """
     
-    # Enhanced CSV URLs with ALL market segments
+    # NSE-focused CSV URLs for optimized discovery
     CSV_URLS = {
         'NSE_CM': 'https://public.fyers.in/sym_details/NSE_CM.csv',   # Cash Market - ~8,717 symbols
         'NSE_FO': 'https://public.fyers.in/sym_details/NSE_FO.csv',   # Futures & Options - ~88,502 symbols  
         'NSE_CD': 'https://public.fyers.in/sym_details/NSE_CD.csv',   # Currency Derivatives - ~11,171 symbols
-        'BSE_CM': 'https://public.fyers.in/sym_details/BSE_CM.csv',   # BSE Cash Market - ~2,000+ symbols
-        'BSE_FO': 'https://public.fyers.in/sym_details/BSE_FO.csv',   # BSE F&O - ~500+ symbols
-        'MCX_COM': 'https://public.fyers.in/sym_details/MCX_COM.csv', # MCX Commodities - ~200+ symbols
+        # BSE and MCX segments removed for focused NSE-only discovery
     }
     
     # FYERS API Instruments endpoint (Primary source)
@@ -558,6 +553,8 @@ class EnhancedSymbolCategorizer:
     """
     
     # Comprehensive Nifty constituent lists (for exact categorization)
+    # ✅ Updated with actual NSE symbol names (AJANTPHARM, AARTIIND, PVRINOX)
+    # ✅ Removed merged/delisted symbols (HDFC, MINDTREE already in list as LTIM)
     NIFTY_50_SYMBOLS = {
         'RELIANCE', 'TCS', 'HDFCBANK', 'ICICIBANK', 'BHARTIARTL', 'INFY', 'SBIN', 'LICI',
         'HINDUNILVR', 'ITC', 'LT', 'AXISBANK', 'KOTAKBANK', 'MARUTI', 'ASIANPAINT',
@@ -566,6 +563,42 @@ class EnhancedSymbolCategorizer:
         'COALINDIA', 'JSWSTEEL', 'HINDALCO', 'TATASTEEL', 'ADANIPORTS', 'GRASIM', 'APOLLOHOSP',
         'BRITANNIA', 'DIVISLAB', 'DRREDDY', 'EICHERMOT', 'HEROMOTOCO', 'CIPLA', 'BPCL',
         'SHRIRAMFIN', 'UPL', 'TRENT', 'INDIGO', 'BAJAJ-AUTO', 'LTIM'
+    }
+    
+    # Nifty 100 = Nifty 50 + Next 50 (total 100 symbols exactly)
+    # ✅ Updated: AJANTPHAR→AJANTPHARM, AARTI→AARTIIND
+    # ❌ Removed: CADILAHC, MINDTREE (already LTIM in Nifty50), AMARAJABAT (delisted)
+    NIFTY_100_SYMBOLS = NIFTY_50_SYMBOLS | {
+        'INDUSINDBK', 'BANKBARODA', 'PNB', 'SIEMENS', 'DABUR', 'HAVELLS', 'PIDILITIND',
+        'MARICO', 'GODREJCP', 'COLPAL', 'MFSL', 'GLAND', 'TORNTPHARM', 'LUPIN',
+        'AARTIIND', 'ALKEM', 'BIOCON', 'AJANTPHARM', 'ZYDUSLIFE',  # Fixed names
+        'COFORGE', 'PERSISTENT', 'MPHASIS', 'LTTS', 'RBLBANK', 'FEDERALBNK',
+        'IDFCFIRSTB', 'BANDHANBNK', 'AUBANK', 'CUB', 'MOTHERSON', 'ASHOKLEY', 'TVSMOTOR',
+        'BALKRISIND', 'MRF', 'APOLLOTYRE', 'CUMMINSIND', 'BOSCHLTD', 'EXIDEIND',
+        'CONCOR', 'SAIL', 'NMDC', 'VEDL', 'JINDALSTEL', 'PETRONET',
+        'GAIL', 'IGL', 'ATGL'
+    }
+    
+    # Nifty 200 = Nifty 100 + Next 100 (total 200 symbols exactly)
+    # ✅ Updated: PVR→PVRINOX  
+    # ❌ Removed: HDFC (merged), ADANIPWR, ADANITRANS, GMRINFRA, IBULHSGFIN, L&TFH, PEL (not in CM)
+    NIFTY_200_SYMBOLS = NIFTY_100_SYMBOLS | {
+        'ACC', 'ABCAPITAL', 'ABBOTINDIA', 'ABFRL', 'ADANIGREEN',
+        'AFFLE', 'AIAENG', 'AKZOINDIA', 'AMBUJACEM', 'ANGELONE', 'ASTRAL', 'ATUL',
+        'AUROPHARMA', 'BAJAJHLDNG', 'BALRAMCHIN', 'BATAINDIA', 'BEL', 'BERGEPAINT',
+        'BHARATFORG', 'BHEL', 'BSOFT', 'CANFINHOME', 'CARBORUNIV', 'CASTROLIND',
+        'CHOLAFIN', 'CHOLAHLDNG', 'CLEAN', 'COROMANDEL', 'CROMPTON', 'DALBHARAT',
+        'DEEPAKNTR', 'DELTACORP', 'DLF', 'DIXON', 'DMART', 'ESCORTS', 'FORTIS',
+        'GLENMARK', 'GNFC', 'GODREJIND', 'GODREJPROP', 'GRANULES',
+        'GUJGASLTD', 'HAL', 'HDFCAMC', 'HDFCLIFE', 'HINDCOPPER', 'HINDPETRO',
+        'HONAUT', 'ICICIPRULI', 'IDEA', 'IEX', 'INDHOTEL', 'INDIACEM',
+        'INDIAMART', 'INDIANB', 'INDUSTOWER', 'IOC', 'IRCTC', 'JKCEMENT', 'JSWENERGY',
+        'JUBLFOOD', 'KPITTECH', 'LALPATHLAB', 'LAURUSLABS', 'LICHSGFIN',
+        'M&MFIN', 'MANAPPURAM', 'METROPOLIS', 'MRPL', 'MUTHOOTFIN', 'NATIONALUM',
+        'NAUKRI', 'NAVINFLUOR', 'OBEROIRLTY', 'OFSS', 'OIL', 'PAGEIND',
+        'PFIZER', 'PIIND', 'POLICYBZR', 'POLYCAB', 'PVRINOX',  # Fixed PVR
+        'RAMCOCEM', 'SRF', 'SUNTV', 'TATACHEM', 'TATACOMM', 'TATACONSUM', 
+        'TATAELXSI', 'TATAPOWER', 'UBL', 'VOLTAS'
     }
     
     BANK_NIFTY_SYMBOLS = {
@@ -697,25 +730,19 @@ class EnhancedSymbolCategorizer:
                 result['instrument_type'] = 'FUTURE'
                 result['sub_category'] = 'INDEX_FUTURE' if 'NIFTY' in symbol else 'STOCK_FUTURE'
         
-        # 💱 CURRENCY CATEGORIZATION
+        # 💱 CURRENCY CATEGORIZATION (NSE_CD)
         elif segment == 'NSE_CD' or 'CURRENCY' in desc:
             result['instrument_type'] = 'CURRENCY'
             result['primary_category'] = 'CURRENCY'
             result['sub_category'] = 'CURRENCY_DERIVATIVE'
             result['sector'] = 'CURRENCY'
         
-        # 🥇 COMMODITY CATEGORIZATION
-        elif segment == 'MCX_COM' or any(x in symbol for x in ['GOLD', 'SILVER', 'CRUDE', 'COPPER']):
-            result['instrument_type'] = 'COMMODITY'
-            result['primary_category'] = 'COMMODITY'
+        # 🥇 COMMODITY ETFs (NSE traded commodity ETFs only)
+        elif any(x in symbol for x in ['GOLD', 'SILVER']) and 'ETF' in desc:
+            result['instrument_type'] = 'ETF'
+            result['primary_category'] = 'ETF'
+            result['sub_category'] = 'COMMODITY_ETF'
             result['sector'] = 'COMMODITIES'
-            
-            if 'GOLD' in symbol:
-                result['sub_category'] = 'PRECIOUS_METAL'
-            elif 'CRUDE' in symbol or 'NATURALGAS' in symbol:
-                result['sub_category'] = 'ENERGY_COMMODITY'
-            else:
-                result['sub_category'] = 'OTHER_COMMODITY'
         
         # 🏛️ BOND CATEGORIZATION  
         elif 'BOND' in desc or 'GOVT' in symbol:
@@ -728,20 +755,20 @@ class EnhancedSymbolCategorizer:
 
 class ComprehensiveFyersDiscovery:
     """
-    🚀 COMPLETE FYERS SYMBOL DISCOVERY SYSTEM
+    🚀 NSE-FOCUSED FYERS SYMBOL DISCOVERY SYSTEM
     
-    Multi-tier comprehensive symbol discovery:
-    1. FYERS API instruments endpoint (Primary - 100,000+ symbols)
-    2. FYERS Public CSV files (Fallback - Complete coverage)
-    3. Advanced 18+ category classification system
+    Optimized NSE-only symbol discovery:
+    1. FYERS API instruments endpoint (Primary - NSE symbols only)
+    2. NSE CSV files (Fallback - Complete NSE coverage)
+    3. Advanced NSE-focused category classification system
     4. Options chain generation with dynamic strikes
     5. Real-time caching and atomic operations
     
-    EXPECTED OUTPUT: 100,000+ Total Symbols
-    📈 EQUITY: 8,000+ symbols (Nifty50/100/200, SmallCap, MidCap)
-    📊 INDEX: 500+ symbols (Major, Sectoral, ETFs)  
-    📈 DERIVATIVES: 80,000+ symbols (Complete options chains)
-    🌍 ALTERNATIVES: 1,000+ symbols (Commodities, Currency, Bonds)
+    EXPECTED OUTPUT: ~100,000+ NSE Symbols
+    📈 NSE_CM (Cash Market): ~8,717 symbols (Nifty50/100/200, SmallCap, MidCap)
+    📊 NSE_FO (F&O): ~88,502 symbols (Futures & Options)  
+    � NSE_CD (Currency): ~11,171 symbols (Currency derivatives)
+    � TOTAL: ~108,390 NSE symbols (optimized discovery)
     """
     
     def __init__(self):
@@ -797,6 +824,10 @@ class ComprehensiveFyersDiscovery:
             
             self.console.print(f"\n[bold green]📊 Total Raw Symbols: {total_discovered:,}[/bold green]")
             
+            # METHOD 2.5: Extract NSE_FO equity symbols and merge with NSE_CM
+            self.console.print("\n🔗 [bold cyan]Phase 2.5: NSE_FO Equity Extraction (for complete Nifty coverage)[/bold cyan]")
+            all_symbols = self._extract_and_merge_nse_fo_equities(all_symbols)
+            
             # METHOD 3: Advanced categorization
             self.console.print("\n🔄 [bold cyan]Phase 3: Advanced Categorization[/bold cyan]")
             categories = self._categorize_all_symbols(all_symbols)
@@ -819,6 +850,101 @@ class ComprehensiveFyersDiscovery:
             logger.exception(f"Symbol discovery failed: {e}")
             self.console.print(f"[red]❌ Symbol discovery failed: {e}[/red]")
             return {}, pd.DataFrame(), {}
+    
+    def _extract_and_merge_nse_fo_equities(self, all_symbols: Dict[str, pd.DataFrame]) -> Dict[str, pd.DataFrame]:
+        """
+        🔗 Extract equity symbols from NSE_FO and merge with NSE_CM for complete Nifty coverage
+        
+        NSE_FO contains both derivatives (futures/options) AND equity symbols.
+        Some stocks like TATAMOTORS only trade in F&O segment, not Cash Market.
+        
+        Strategy:
+        1. Extract unique base_symbols from NSE_FO (column 13)
+        2. Filter for equity-only symbols (exclude futures/options contracts)
+        3. Merge with NSE_CM to create complete NSE equity universe
+        4. Update NSE_CM with merged dataset
+        
+        Returns:
+            Updated all_symbols dict with merged NSE_CM
+        """
+        if 'NSE_FO' not in all_symbols or 'NSE_CM' not in all_symbols:
+            self.console.print("[yellow]⚠️ NSE_CM or NSE_FO not available for merging[/yellow]")
+            return all_symbols
+        
+        try:
+            nse_cm_df = all_symbols['NSE_CM']
+            nse_fo_df = all_symbols['NSE_FO']
+            
+            # Extract base symbols from NSE_CM (existing equity symbols)
+            cm_base_symbols = set()
+            for _, row in nse_cm_df.iterrows():
+                base_symbol = str(row.iloc[13]) if len(row) > 13 else ''
+                if base_symbol and base_symbol != 'nan':
+                    cm_base_symbols.add(base_symbol)
+            
+            self.console.print(f"   📊 NSE_CM equity symbols: {len(cm_base_symbols):,}")
+            
+            # Extract unique equity base symbols from NSE_FO
+            fo_equity_symbols = {}  # base_symbol -> first occurrence row
+            fo_derivatives_count = 0
+            
+            for _, row in nse_fo_df.iterrows():
+                base_symbol = str(row.iloc[13]) if len(row) > 13 else ''
+                company_name = str(row.iloc[1]) if len(row) > 1 else ''
+                
+                if not base_symbol or base_symbol == 'nan':
+                    continue
+                
+                # Skip if already in CM
+                if base_symbol in cm_base_symbols:
+                    fo_derivatives_count += 1
+                    continue
+                
+                # Check if it's an equity symbol (not a derivative contract)
+                # Derivatives have expiry dates, strike prices, CE/PE suffixes in description
+                is_derivative = any(keyword in company_name.upper() for keyword in 
+                                  ['FUT', 'CE', 'PE', 'CALL', 'PUT', 'OPTION', 'FUTURE'])
+                
+                if not is_derivative and base_symbol not in fo_equity_symbols:
+                    fo_equity_symbols[base_symbol] = row
+            
+            self.console.print(f"   📊 NSE_FO unique base symbols: {len(fo_equity_symbols):,}")
+            self.console.print(f"   📊 NSE_FO derivatives (already in CM): {fo_derivatives_count:,}")
+            
+            if not fo_equity_symbols:
+                self.console.print("   [yellow]ℹ️ No additional equity symbols found in NSE_FO[/yellow]")
+                return all_symbols
+            
+            # Create DataFrame from FO equity symbols
+            fo_equity_rows = list(fo_equity_symbols.values())
+            fo_equity_df = pd.DataFrame(fo_equity_rows, columns=nse_fo_df.columns)
+            
+            # Merge with NSE_CM
+            merged_cm = pd.concat([nse_cm_df, fo_equity_df], ignore_index=True)
+            
+            self.console.print(f"   [green]✅ Merged NSE_CM: {len(nse_cm_df):,} → {len(merged_cm):,} (+{len(fo_equity_df):,} from F&O)[/green]")
+            
+            # Check if we got TATAMOTORS
+            tatamotors_found = 'TATAMOTORS' in fo_equity_symbols
+            if tatamotors_found:
+                self.console.print("   [bold green]🎯 Found TATAMOTORS in NSE_FO! Nifty50 will be complete.[/bold green]")
+            else:
+                self.console.print("   [yellow]⚠️ TATAMOTORS not found in NSE_FO (may be in different segment)[/yellow]")
+            
+            # Update all_symbols with merged CM
+            all_symbols['NSE_CM'] = merged_cm
+            
+            # Show samples of added symbols
+            sample_symbols = list(fo_equity_symbols.keys())[:10]
+            if sample_symbols:
+                self.console.print(f"   [dim]Sample added symbols: {', '.join(sample_symbols)}[/dim]")
+            
+            return all_symbols
+            
+        except Exception as e:
+            self.console.print(f"[red]❌ Error merging NSE_FO equities: {e}[/red]")
+            logger.exception("NSE_FO equity extraction failed")
+            return all_symbols
     
     def _categorize_all_symbols(self, all_symbols: Dict[str, pd.DataFrame]) -> Dict[str, List[Dict[str, Any]]]:
         """Apply comprehensive categorization to all symbols"""
@@ -1169,37 +1295,201 @@ class ComprehensiveFyersDiscovery:
             self.console.print(f"[red]❌ Symbol discovery failed: {e}[/red]")
             return {}, pd.DataFrame(), {}
     
-    def search_symbol(self, query: str):
-        """Search for a specific symbol across all segments"""
-        self.console.print(f"🔍 Searching for '{query}' across all segments...")
+    
+    def _display_nse_cm_categories(self, all_symbols: Dict[str, pd.DataFrame]):
+        """Display categorized breakdown of NSE_CM symbols"""
+        if 'NSE_CM' not in all_symbols:
+            self.console.print("[yellow]⚠️ NSE_CM data not available[/yellow]")
+            return
         
-        try:
-            results = self.symbol_manager.search_symbols(query)
-            
-            if not results:
-                self.console.print(f"[red]❌ No symbols found matching '{query}'[/red]")
-                return
-            
-            # Display results
-            table = Table(title=f"Search Results for '{query}'", box=box.ROUNDED)
-            table.add_column("Segment", style="cyan")
-            table.add_column("Symbol", style="bold green")
-            table.add_column("Description", style="yellow")
-            
-            for result in results[:20]:  # Show top 20 results
-                segment = result.get('segment', 'N/A')
-                symbol = result.get('Symbol', result.get('symbol', 'N/A'))
-                desc = result.get('Description', result.get('description', 'N/A'))
+        nse_cm_df = all_symbols['NSE_CM']
+        
+        # Categorize NSE_CM symbols
+        categories = {
+            'NIFTY50': [],
+            'NIFTY100': [],
+            'NIFTY200': [],
+            'BANK_NIFTY': [],
+            'IT_STOCKS': [],
+            'PHARMA_STOCKS': [],
+            'AUTO_STOCKS': [],
+            'FMCG_STOCKS': [],
+            'METAL_STOCKS': [],
+            'ENERGY_STOCKS': [],
+            'INDICES': [],
+            'ETFS': [],
+            'OTHER_STOCKS': []
+        }
+        
+        # Process each symbol using correct column indices
+        # Column 1: Company Name, Column 9: NSE Symbol, Column 13: Base Symbol
+        for _, row in nse_cm_df.iterrows():
+            try:
+                company_name = str(row.iloc[1]) if len(row) > 1 else ''
+                nse_symbol = str(row.iloc[9]) if len(row) > 9 else ''
+                base_symbol = str(row.iloc[13]) if len(row) > 13 else ''
                 
-                table.add_row(segment, symbol, desc)
-            
-            self.console.print(table)
-            
-            if len(results) > 20:
-                self.console.print(f"[dim]... and {len(results) - 20} more results[/dim]")
+                if not base_symbol or base_symbol == 'nan':
+                    continue
                 
-        except Exception as e:
-            self.console.print(f"[red]❌ Search failed: {e}[/red]")
+                # Track if symbol is categorized (for OTHER_STOCKS fallback)
+                is_categorized = False
+                
+                # Categorize in ALL applicable Nifty indices (not hierarchical)
+                # Nifty50 ⊆ Nifty100 ⊆ Nifty200, so use independent if statements
+                if base_symbol in self.categorizer.NIFTY_50_SYMBOLS:
+                    categories['NIFTY50'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                if base_symbol in self.categorizer.NIFTY_100_SYMBOLS:
+                    categories['NIFTY100'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                if base_symbol in self.categorizer.NIFTY_200_SYMBOLS:
+                    categories['NIFTY200'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                
+                # Other categories remain hierarchical (mutually exclusive)
+                if base_symbol in self.categorizer.BANK_NIFTY_SYMBOLS:
+                    categories['BANK_NIFTY'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('IT', []):
+                    categories['IT_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('PHARMA', []):
+                    categories['PHARMA_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('AUTO', []):
+                    categories['AUTO_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('FMCG', []):
+                    categories['FMCG_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('METAL', []):
+                    categories['METAL_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif base_symbol in self.categorizer.SECTORAL_CATEGORIES.get('ENERGY', []):
+                    categories['ENERGY_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif 'NIFTY' in nse_symbol or 'INDEX' in company_name.upper() or base_symbol.startswith('NIFTY'):
+                    categories['INDICES'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                elif 'ETF' in company_name.upper() or 'ETF' in nse_symbol or '-MF' in nse_symbol:
+                    categories['ETFS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    is_categorized = True
+                
+                # Only add to OTHER_STOCKS if not categorized anywhere else
+                if not is_categorized:
+                    categories['OTHER_STOCKS'].append({'symbol': base_symbol, 'fyers': nse_symbol, 'desc': company_name})
+                    
+            except Exception as e:
+                # Skip rows with parsing errors
+                continue
+        
+        # Display categorization table
+        self.console.print("\n")
+        self.console.rule("[bold green]📊 NSE_CM CATEGORIZATION BREAKDOWN[/bold green]")
+        
+        cat_table = Table(title="🏷️ NSE Cash Market Categories", box=box.ROUNDED, title_style="bold cyan")
+        cat_table.add_column("Category", style="bold blue", width=20)
+        cat_table.add_column("Count", justify="right", style="bold yellow", width=10)
+        cat_table.add_column("Sample Symbols", style="green", width=50)
+        
+        for category, symbols in categories.items():
+            if symbols:
+                count = len(symbols)
+                # Show first 3-5 symbols as samples
+                sample_symbols = [s['symbol'] for s in symbols[:5]]
+                sample_text = ', '.join(sample_symbols)
+                if count > 5:
+                    sample_text += f" ... (+{count-5} more)"
+                
+                cat_table.add_row(
+                    category.replace('_', ' ').title(),
+                    str(count),
+                    sample_text
+                )
+        
+        self.console.print(cat_table)
+        
+        # Summary stats
+        total_categorized = sum(len(symbols) for symbols in categories.values())
+        self.console.print(f"\n[green]✅ Categorized {total_categorized:,} of {len(nse_cm_df):,} NSE_CM symbols[/green]")
+        
+        # Validate Nifty index counts
+        self._validate_nifty_counts(categories)
+        
+        # Show top categories
+        top_categories = sorted(categories.items(), key=lambda x: len(x[1]), reverse=True)[:5]
+        self.console.print(f"\n[yellow]🏆 Top Categories:[/yellow]")
+        for category, symbols in top_categories:
+            if symbols:
+                self.console.print(f"  • {category.replace('_', ' ').title()}: {len(symbols)} symbols")
+    
+    def _validate_nifty_counts(self, categories):
+        """Validate that Nifty index counts match expected numbers"""
+        self.console.print("\n")
+        self.console.rule("[bold magenta]🔍 NIFTY INDEX VALIDATION[/bold magenta]")
+        
+        # Expected counts
+        expected_counts = {
+            'NIFTY50': 50,
+            'NIFTY100': 100,
+            'NIFTY200': 200
+        }
+        
+        # Create validation table
+        validation_table = Table(title="📊 Nifty Index Count Validation", box=box.ROUNDED, title_style="bold cyan")
+        validation_table.add_column("Index", style="bold blue", width=15)
+        validation_table.add_column("Expected", justify="right", style="yellow", width=10)
+        validation_table.add_column("Found", justify="right", style="bold green", width=10)
+        validation_table.add_column("Status", style="bold", width=15)
+        validation_table.add_column("Difference", justify="right", style="dim", width=12)
+        
+        all_issues = []
+        
+        for index_name, expected in expected_counts.items():
+            found = len(categories.get(index_name, []))
+            difference = found - expected
+            
+            if found == expected:
+                status = "[green]✅ PERFECT[/green]"
+                diff_text = "0"
+            elif found > expected:
+                status = "[yellow]⚠️ EXTRA[/yellow]"
+                diff_text = f"+{difference}"
+                all_issues.append(f"{index_name}: {found} found vs {expected} expected (+{difference})")
+            else:
+                status = "[red]❌ MISSING[/red]"
+                diff_text = f"{difference}"
+                all_issues.append(f"{index_name}: {found} found vs {expected} expected ({difference})")
+            
+            validation_table.add_row(
+                index_name,
+                str(expected),
+                str(found),
+                status,
+                diff_text
+            )
+        
+        self.console.print(validation_table)
+        
+        # Show detailed analysis
+        if all_issues:
+            self.console.print(f"\n[yellow]⚠️ Issues Found:[/yellow]")
+            for issue in all_issues:
+                self.console.print(f"  • {issue}")
+            
+            # Suggest possible reasons
+            self.console.print(f"\n[blue]💡 Possible Reasons:[/blue]")
+            self.console.print("  • Index composition changes over time")
+            self.console.print("  • Some symbols may be delisted or suspended")
+            self.console.print("  • Symbol name variations (e.g., BAJAJ-AUTO vs BAJAJAUTO)")
+            self.console.print("  • Missing symbols in NSE_CM data")
+        else:
+            self.console.print(f"\n[green]🎉 All Nifty indices have perfect counts![/green]")
+        
+        # Show constituent distribution
+        total_nifty_symbols = sum(len(categories.get(idx, [])) for idx in expected_counts.keys())
+        self.console.print(f"\n[cyan]📈 Total Nifty Symbols Found: {total_nifty_symbols}[/cyan]")
 
 def main():
     """Main entry point"""
@@ -1209,40 +1499,32 @@ def main():
         # Initialize discovery system
         discovery = ComprehensiveFyersDiscovery()
         
-        console.print("\n[bold blue]FYERS Comprehensive Symbol Discovery[/bold blue]")
-        console.print("Fetches 100,000+ symbols from all market segments\n")
+        console.print("\n[bold blue]NSE-Focused FYERS Symbol Discovery[/bold blue]")
+        console.print("Fetches ~108,000+ NSE symbols from all market segments\n")
         
         # Interactive menu
         while True:
             console.print("[bold]Choose an option:[/bold]")
-            console.print("1. 🔍 Discover all symbols (Full Discovery)")
-            console.print("2. 🔎 Search for specific symbol")
-            console.print("3. 📊 Get statistics")
-            console.print("4. 🔄 Force refresh cache")
-            console.print("5. ❌ Exit")
+            console.print("1. 🔍 Discover all NSE symbols (Full Discovery)")
+            console.print("2.  Get statistics")
+            console.print("3. 🔄 Force refresh cache")
+            console.print("4. ❌ Exit")
             
-            choice = console.input("\nEnter your choice (1-5): ").strip()
+            choice = console.input("\nEnter your choice (1-4): ").strip()
             
             if choice == "1":
                 categories, df, all_symbols = discovery.discover_all_symbols(force_refresh=False)
                 
                 if not df.empty:
-                    console.print(f"\n[green]🎉 Success! Discovered {len(df):,} symbols[/green]")
+                    console.print(f"\n[green]🎉 Success! Discovered {len(df):,} NSE symbols[/green]")
                     
-                    # Ask if user wants to search for TATAMOTORS
-                    search_tata = console.input("\nWould you like to search for TATAMOTORS? (y/n): ").strip().lower()
-                    if search_tata == 'y':
-                        discovery.search_symbol('TATAMOTORS')
+                    # Display categorization for NSE_CM symbols
+                    discovery._display_nse_cm_categories(all_symbols)
                 
             elif choice == "2":
-                query = console.input("Enter symbol to search: ").strip()
-                if query:
-                    discovery.search_symbol(query)
-                    
-            elif choice == "3":
                 stats = discovery.symbol_manager.get_statistics()
                 
-                table = Table(title="📊 Symbol Statistics", box=box.ROUNDED)
+                table = Table(title="📊 NSE Symbol Statistics", box=box.ROUNDED)
                 table.add_column("Segment", style="cyan")
                 table.add_column("Status", style="green")
                 table.add_column("Count", justify="right", style="yellow")
@@ -1255,12 +1537,12 @@ def main():
                 
                 console.print(table)
                 
-            elif choice == "4":
-                console.print("🔄 Force refreshing all caches...")
+            elif choice == "3":
+                console.print("🔄 Force refreshing all NSE caches...")
                 categories, df, all_symbols = discovery.discover_all_symbols(force_refresh=True)
                 console.print("✅ Cache refresh complete!")
                 
-            elif choice == "5":
+            elif choice == "4":
                 console.print("👋 Goodbye!")
                 break
                 

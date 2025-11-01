@@ -47,27 +47,41 @@ These systems are working and production-ready:
 4. **`data/` directory structure** - Unified data storage (no scripts/data/ anymore)
 5. **`samples/` testing framework** - Professional test suite with run_tests.py
 
-### 🔧 **CURRENT FOCUS AREAS** (Safe to enhance)
-- 🔄 **Live WebSocket Testing** - `scripts/websocket/run_websocket.py` validation
-- 🔄 **WebSocket Integration** - Connect 156K symbols with real-time streaming  
-- 🔄 **Analytics Dashboard** - Rich-based portfolio analytics using symbol universe
+### 🔧 **CURRENT FOCUS AREAS** (October 29, 2025)
+**PROJECT GOALS:**
+1. ✅ **Symbol Discovery** - COMPLETE (273 ETFs + 8,686 equities via NSE+FYERS matching)
+2. � **Historical Data Pipeline** - IN PROGRESS (Need bulk downloader for 5 years, all timeframes)
+3. ❌ **Backtesting System** - TODO (Need engine + strategies + comparison dashboard)
 
-### 📂 **UPDATED PROJECT STRUCTURE** (As of October 27, 2025)
+**NEXT PRIORITIES:**
+- � **Build Bulk Historical Downloader** - Download 5 years for all symbols (1m to 1D)
+- 🔨 **Enhance Data Storage** - Month/date folder organization
+- 🔨 **Restore Backtesting Engine** - Deleted during cleanup, needs rebuild
+- � **Create Strategy Library** - 5-10 technical strategies with comparison
+
+**See:** `PROJECT_REVIEW_AND_GAPS.md` for detailed analysis
+
+### 📂 **UPDATED PROJECT STRUCTURE** (As of October 29, 2025)
 ```
 fyers-websocket-live/
 ├── auth/                    # Authentication files
-├── data/                    # UNIFIED data storage (consolidated from scripts/data/)
-├── scripts/                 # ORGANIZED scripts (34 production + 36 archived)
+├── data/                    # UNIFIED data storage
+│   ├── consolidated_symbols/  # NSE+FYERS matched symbols (273 ETFs + 8,686 equities)
+│   ├── fyers_symbols/         # FYERS official symbols cache
+│   ├── nse_data_input_csv/    # Manual NSE CSV downloads (10 files)
+│   ├── nse_symbols/           # NSE index constituents
+│   ├── parquet/               # Historical data storage (organized by category)
+│   └── symbols/               # Symbol metadata
+├── scripts/                 # ORGANIZED scripts (CLEANED - Yahoo removed)
 │   ├── auth/               # Authentication (4 scripts)
 │   ├── websocket/          # Real-time streaming (5 scripts)  
 │   ├── market_data/        # Data collection (7 scripts)
-│   ├── symbol_discovery/   # 156K symbols (8 scripts)
-│   ├── data/               # Storage management (4 scripts)
+│   ├── symbol_discovery/   # NSE+FYERS symbol matching (4 scripts)
+│   ├── data/               # Storage management (3 scripts)
 │   ├── core/               # Utilities (6 scripts)
-│   ├── archive/            # Archived old scripts (30 files)
-│   └── test/               # Testing utilities (6 files)
-├── samples/                # Testing framework (NO auth samples)
-├── logs/                   # CONSOLIDATED logs (moved from scripts/logs/)
+│   └── archive/            # Archived old scripts (48 files)
+├── samples/                # Testing framework
+├── logs/                   # Consolidated logs
 └── docs/                   # Documentation
 ```
 
@@ -420,8 +434,11 @@ nifty50 = discovery.get_nifty50_constituents()  # Tries Fyers → NSE → fallba
 
 ## Architecture Decisions
 
-### Fyers-Only Data Strategy
-- **No Fallbacks**: Removed Yahoo Finance/other sources for data accuracy
+### Data Source Strategy (Updated Oct 29, 2025)
+- **NSE Official Data**: Manual CSV downloads from NSE website (authoritative source)
+- **FYERS Official Symbols**: Direct API integration for symbol validation
+- **Hybrid Matching**: NSE symbols matched with FYERS format for trading
+- **No Yahoo Finance**: Removed all Yahoo dependencies for data accuracy
 - **Real-time Focus**: Fyers API provides true real-time data vs delayed alternatives
 - **API Limits**: Built-in `time.sleep(1)` in historical loops to respect rate limits
 

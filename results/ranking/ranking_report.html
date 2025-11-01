@@ -1,0 +1,592 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Strategy Ranking Report</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 40px;
+                    background-color: #f5f5f5;
+                }
+                .container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 40px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #2c3e50;
+                    border-bottom: 3px solid #3498db;
+                    padding-bottom: 10px;
+                }
+                h2 {
+                    color: #34495e;
+                    margin-top: 40px;
+                    border-left: 5px solid #3498db;
+                    padding-left: 15px;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                th, td {
+                    padding: 12px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+                th {
+                    background-color: #3498db;
+                    color: white;
+                    font-weight: bold;
+                }
+                tr:hover {
+                    background-color: #f5f5f5;
+                }
+                .metric {
+                    display: inline-block;
+                    margin: 10px 20px;
+                    padding: 15px;
+                    background-color: #ecf0f1;
+                    border-radius: 5px;
+                }
+                .metric-value {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #2c3e50;
+                }
+                .metric-label {
+                    font-size: 12px;
+                    color: #7f8c8d;
+                    text-transform: uppercase;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    margin: 20px 0;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                .highlight {
+                    background-color: #fff3cd;
+                    padding: 15px;
+                    border-left: 5px solid #ffc107;
+                    margin: 20px 0;
+                }
+                .footer {
+                    margin-top: 40px;
+                    padding-top: 20px;
+                    border-top: 2px solid #ecf0f1;
+                    color: #7f8c8d;
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🏆 Strategy Ranking Report</h1>
+                <p><strong>Generated:</strong> 2025-10-29 14:04:40</p>
+                <p><strong>Total Backtests:</strong> 275</p>
+                
+                <div class="highlight">
+                    <strong>📊 Composite Scoring Weights:</strong><br>
+                    Sharpe Ratio: 35% | 
+                    Total Return: 30% | 
+                    Max Drawdown: 20% | 
+                    Win Rate: 15%
+                </div>
+                
+                <h2>📈 Strategy Summary</h2>
+                <table>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Avg Composite Score</th>
+                        <th>Avg Return (%)</th>
+                        <th>Avg Sharpe</th>
+                        <th>Avg Drawdown (%)</th>
+                        <th>Avg Win Rate (%)</th>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>MA Crossover</strong></td>
+                        <td>39.29</td>
+                        <td>153.14</td>
+                        <td>0.69</td>
+                        <td>-30.76</td>
+                        <td>48.64</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>MACD</strong></td>
+                        <td>34.63</td>
+                        <td>84.64</td>
+                        <td>0.53</td>
+                        <td>-28.91</td>
+                        <td>40.09</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>RSI</strong></td>
+                        <td>32.84</td>
+                        <td>31.28</td>
+                        <td>0.32</td>
+                        <td>-36.85</td>
+                        <td>67.93</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>Bollinger Bands</strong></td>
+                        <td>32.52</td>
+                        <td>30.33</td>
+                        <td>0.30</td>
+                        <td>-36.63</td>
+                        <td>68.02</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>Momentum</strong></td>
+                        <td>32.38</td>
+                        <td>79.42</td>
+                        <td>0.46</td>
+                        <td>-30.60</td>
+                        <td>35.98</td>
+                    </tr>
+            
+                </table>
+                
+                <h2>🥇 Top 20 Best Backtests (by Composite Score)</h2>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Stock</th>
+                        <th>Strategy</th>
+                        <th>Composite Score</th>
+                        <th>Return (%)</th>
+                        <th>Sharpe</th>
+                        <th>Drawdown (%)</th>
+                        <th>Win Rate (%)</th>
+                    </tr>
+        
+                    <tr>
+                        <td>1</td>
+                        <td><strong>ADANIENT</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>89.42</strong></td>
+                        <td>2018.11</td>
+                        <td>1.79</td>
+                        <td>-21.80</td>
+                        <td>63.64</td>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td><strong>ADANIENT</strong></td>
+                        <td>MACD</td>
+                        <td><strong>54.19</strong></td>
+                        <td>717.79</td>
+                        <td>1.26</td>
+                        <td>-40.63</td>
+                        <td>48.89</td>
+                    </tr>
+            
+                    <tr>
+                        <td>3</td>
+                        <td><strong>M&M</strong></td>
+                        <td>MACD</td>
+                        <td><strong>53.50</strong></td>
+                        <td>262.48</td>
+                        <td>1.17</td>
+                        <td>-14.22</td>
+                        <td>50.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td>4</td>
+                        <td><strong>TATASTEEL</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>53.08</strong></td>
+                        <td>346.94</td>
+                        <td>1.12</td>
+                        <td>-29.10</td>
+                        <td>70.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td>5</td>
+                        <td><strong>ITC</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>53.07</strong></td>
+                        <td>159.76</td>
+                        <td>1.09</td>
+                        <td>-17.15</td>
+                        <td>70.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td>6</td>
+                        <td><strong>POWERGRID</strong></td>
+                        <td>RSI</td>
+                        <td><strong>52.71</strong></td>
+                        <td>120.42</td>
+                        <td>1.06</td>
+                        <td>-24.75</td>
+                        <td>86.67</td>
+                    </tr>
+            
+                    <tr>
+                        <td>7</td>
+                        <td><strong>EICHERMOT</strong></td>
+                        <td>RSI</td>
+                        <td><strong>52.43</strong></td>
+                        <td>252.76</td>
+                        <td>1.15</td>
+                        <td>-35.54</td>
+                        <td>82.61</td>
+                    </tr>
+            
+                    <tr>
+                        <td>8</td>
+                        <td><strong>SUNPHARMA</strong></td>
+                        <td>RSI</td>
+                        <td><strong>51.98</strong></td>
+                        <td>133.49</td>
+                        <td>1.00</td>
+                        <td>-22.98</td>
+                        <td>84.21</td>
+                    </tr>
+            
+                    <tr>
+                        <td>9</td>
+                        <td><strong>BAJAJ-AUTO</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>51.89</strong></td>
+                        <td>237.68</td>
+                        <td>1.18</td>
+                        <td>-28.92</td>
+                        <td>66.67</td>
+                    </tr>
+            
+                    <tr>
+                        <td>10</td>
+                        <td><strong>IOC</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>51.68</strong></td>
+                        <td>192.08</td>
+                        <td>1.03</td>
+                        <td>-20.09</td>
+                        <td>69.23</td>
+                    </tr>
+            
+                    <tr>
+                        <td>11</td>
+                        <td><strong>APOLLOHOSP</strong></td>
+                        <td>Momentum</td>
+                        <td><strong>51.63</strong></td>
+                        <td>282.48</td>
+                        <td>1.14</td>
+                        <td>-19.61</td>
+                        <td>49.45</td>
+                    </tr>
+            
+                    <tr>
+                        <td>12</td>
+                        <td><strong>ADANIENT</strong></td>
+                        <td>Momentum</td>
+                        <td><strong>51.50</strong></td>
+                        <td>633.35</td>
+                        <td>1.21</td>
+                        <td>-40.37</td>
+                        <td>44.94</td>
+                    </tr>
+            
+                    <tr>
+                        <td>13</td>
+                        <td><strong>POWERGRID</strong></td>
+                        <td>Bollinger Bands</td>
+                        <td><strong>51.37</strong></td>
+                        <td>90.79</td>
+                        <td>0.85</td>
+                        <td>-18.79</td>
+                        <td>92.31</td>
+                    </tr>
+            
+                    <tr>
+                        <td>14</td>
+                        <td><strong>NESTLEIND</strong></td>
+                        <td>RSI</td>
+                        <td><strong>50.42</strong></td>
+                        <td>97.63</td>
+                        <td>0.82</td>
+                        <td>-16.09</td>
+                        <td>85.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td>15</td>
+                        <td><strong>TATACONSUM</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.98</strong></td>
+                        <td>171.90</td>
+                        <td>1.07</td>
+                        <td>-18.28</td>
+                        <td>53.85</td>
+                    </tr>
+            
+                    <tr>
+                        <td>16</td>
+                        <td><strong>BHARTIARTL</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.11</strong></td>
+                        <td>169.19</td>
+                        <td>1.00</td>
+                        <td>-25.06</td>
+                        <td>66.67</td>
+                    </tr>
+            
+                    <tr>
+                        <td>17</td>
+                        <td><strong>ADANIPORTS</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.03</strong></td>
+                        <td>277.44</td>
+                        <td>0.96</td>
+                        <td>-34.80</td>
+                        <td>76.92</td>
+                    </tr>
+            
+                    <tr>
+                        <td>18</td>
+                        <td><strong>SHRIRAMFIN</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.01</strong></td>
+                        <td>282.84</td>
+                        <td>0.95</td>
+                        <td>-29.51</td>
+                        <td>68.75</td>
+                    </tr>
+            
+                    <tr>
+                        <td>19</td>
+                        <td><strong>NTPC</strong></td>
+                        <td>Bollinger Bands</td>
+                        <td><strong>48.57</strong></td>
+                        <td>149.87</td>
+                        <td>0.99</td>
+                        <td>-30.87</td>
+                        <td>76.47</td>
+                    </tr>
+            
+                    <tr>
+                        <td>20</td>
+                        <td><strong>GRASIM</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>48.00</strong></td>
+                        <td>234.99</td>
+                        <td>1.16</td>
+                        <td>-26.76</td>
+                        <td>41.18</td>
+                    </tr>
+            
+                </table>
+                
+                <h2>🎯 Best Strategy Per Stock (Top 20)</h2>
+                <table>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Best Strategy</th>
+                        <th>Composite Score</th>
+                        <th>Return (%)</th>
+                        <th>Sharpe</th>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>ADANIENT</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>89.42</strong></td>
+                        <td>2018.11</td>
+                        <td>1.79</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>M&M</strong></td>
+                        <td>MACD</td>
+                        <td><strong>53.50</strong></td>
+                        <td>262.48</td>
+                        <td>1.17</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>TATASTEEL</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>53.08</strong></td>
+                        <td>346.94</td>
+                        <td>1.12</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>ITC</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>53.07</strong></td>
+                        <td>159.76</td>
+                        <td>1.09</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>POWERGRID</strong></td>
+                        <td>RSI</td>
+                        <td><strong>52.71</strong></td>
+                        <td>120.42</td>
+                        <td>1.06</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>EICHERMOT</strong></td>
+                        <td>RSI</td>
+                        <td><strong>52.43</strong></td>
+                        <td>252.76</td>
+                        <td>1.15</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>SUNPHARMA</strong></td>
+                        <td>RSI</td>
+                        <td><strong>51.98</strong></td>
+                        <td>133.49</td>
+                        <td>1.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>BAJAJ-AUTO</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>51.89</strong></td>
+                        <td>237.68</td>
+                        <td>1.18</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>IOC</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>51.68</strong></td>
+                        <td>192.08</td>
+                        <td>1.03</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>APOLLOHOSP</strong></td>
+                        <td>Momentum</td>
+                        <td><strong>51.63</strong></td>
+                        <td>282.48</td>
+                        <td>1.14</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>NESTLEIND</strong></td>
+                        <td>RSI</td>
+                        <td><strong>50.42</strong></td>
+                        <td>97.63</td>
+                        <td>0.82</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>TATACONSUM</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.98</strong></td>
+                        <td>171.90</td>
+                        <td>1.07</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>BHARTIARTL</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.11</strong></td>
+                        <td>169.19</td>
+                        <td>1.00</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>ADANIPORTS</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.03</strong></td>
+                        <td>277.44</td>
+                        <td>0.96</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>SHRIRAMFIN</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>49.01</strong></td>
+                        <td>282.84</td>
+                        <td>0.95</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>NTPC</strong></td>
+                        <td>Bollinger Bands</td>
+                        <td><strong>48.57</strong></td>
+                        <td>149.87</td>
+                        <td>0.99</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>GRASIM</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>48.00</strong></td>
+                        <td>234.99</td>
+                        <td>1.16</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>HINDALCO</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>47.73</strong></td>
+                        <td>337.41</td>
+                        <td>1.06</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>CIPLA</strong></td>
+                        <td>MA Crossover</td>
+                        <td><strong>47.57</strong></td>
+                        <td>92.37</td>
+                        <td>0.70</td>
+                    </tr>
+            
+                    <tr>
+                        <td><strong>TATAMOTORS</strong></td>
+                        <td>Momentum</td>
+                        <td><strong>46.93</strong></td>
+                        <td>391.80</td>
+                        <td>1.08</td>
+                    </tr>
+            
+                </table>
+                
+                <h2>📊 Visualizations</h2>
+                
+                <h3>Risk-Return Profile</h3>
+                <img src="risk_return_scatter.png" alt="Risk-Return Scatter">
+                
+                <h3>Performance Heatmap</h3>
+                <img src="performance_heatmap.png" alt="Performance Heatmap">
+                
+                <h3>Composite Score Distribution</h3>
+                <img src="score_distribution.png" alt="Score Distribution">
+                
+                <h3>Strategy Win Counts</h3>
+                <img src="strategy_win_counts.png" alt="Strategy Win Counts">
+                
+                <h3>Return vs Sharpe Comparison</h3>
+                <img src="return_sharpe_comparison.png" alt="Return Sharpe Comparison">
+                
+                <div class="footer">
+                    <p>Strategy Ranking System | Nifty 50 Backtesting Project</p>
+                    <p>All metrics calculated over ~5.8 years of historical data</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        

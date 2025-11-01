@@ -1,14 +1,16 @@
+import configparser
 from fyers_apiv3 import fyersModel
 
-client_id = "XC4XXXXM-100"
-access_token = "eyJ0eXXXXXXXX2c5-Y3RgS8wR14g"
+# Read client_id dynamically from auth/credentials.ini
+config = configparser.ConfigParser()
+config.read("auth/credentials.ini")
+client_id = config.get("fyers", "client_id")
 
-# Initialize the FyersModel instance with your client_id, access_token, and enable async mode
+# Read access_token dynamically from auth/access_token.txt
+with open("auth/access_token.txt", "r", encoding="utf-8") as f:
+	access_token = f.read().strip()
+
 fyers = fyersModel.FyersModel(client_id=client_id, is_async=False, token=access_token, log_path="")
-
-# Make a request to get the user profile information
 response = fyers.get_profile()
-
-# Print the response received from the Fyers API
 print(response)
 
