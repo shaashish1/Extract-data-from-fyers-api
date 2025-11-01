@@ -1,8 +1,8 @@
 # Ignore credential files
 # Ignore credential files
-credentials.ini
-access_token.py
-access_token.txt
+# credentials.ini
+# access_token.py
+# access_token.txt
 
 # Virtual environment
 venv/
